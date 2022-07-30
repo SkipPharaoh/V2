@@ -1,4 +1,4 @@
-interface Projects {
+export interface ProjectsInterface {
   title: string;
   tech: string[];
   description: string;
@@ -7,7 +7,7 @@ interface Projects {
   app: string;
 };
 
-export const projects: Array<Projects> = [
+export const projectsData: Array<ProjectsInterface> = [
   {
     title: "Personal Website",
     tech: ["React", "TailwindCSS"],

@@ -1,8 +1,8 @@
 import React from "react";
-import { projects } from "../Data";
+import { projectsData, ProjectsInterface } from "../Data";
 
 const Projects: React.FC<{}> = () => {
-  const projectsObject: JSX.Element[] = projects.map((projects, idx: number) => {
+  const projectsObject: JSX.Element[] = projectsData.map((projects: ProjectsInterface, idx: number) => {
     const Tech: JSX.Element[] = projects.tech.map((title: string, idx: number) => {
       return (
         <div key={idx}>
