@@ -1,4 +1,4 @@
-
+import headshot from '../assets/headshot.png'
 
 const About: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const About: React.FC = () => {
                     A full Stack Developer with a passion and tenacity for problem-solving. I would love to be apart of an exceptional team who creates exceptional digital experiences. I have a huge interest in working within the FinTech, Investment, or Technology industry.
                 </p>
             </div>
-            <img src="" alt="Handsome Fellow"/>
+            <img src={headshot} alt="Handsome Fellow"/>
         </div>
         <div>
             <div>

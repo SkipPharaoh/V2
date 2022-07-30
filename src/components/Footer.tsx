@@ -1,11 +1,12 @@
 import React from 'react'
+import Logo from '../assets/logo.png'
 
 const Footer: React.FC<{}> = () => {
   return (
     <div>
         <footer>
             <a href="/">
-                <img src="" alt="Logo" />
+                <img src={Logo} alt="Logo" />
             </a>
 
             <p>Built & Designed by Caniggia Thompson</p>
