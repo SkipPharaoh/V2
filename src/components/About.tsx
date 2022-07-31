@@ -1,6 +1,6 @@
 import headshot from '../assets/headshot.png'
 
-const About: React.FC = () => {
+const About: React.FC<{}> = () => {
   return (
     <div className="About">
 
