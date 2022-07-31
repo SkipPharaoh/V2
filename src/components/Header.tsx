@@ -26,9 +26,6 @@ const Header: React.FC<{}> = () => {
             <a href={require('../assets/docs/Resume.pdf')} target='_blank' rel="noopener noreferrer">
                 Resume
             </a>
-            <a href={require('../assets/docs/Disc.pdf')} target='_blank' rel="noopener noreferrer">
-                Disc
-            </a>
         </div>
     </nav>
   </div>
