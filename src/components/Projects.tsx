@@ -1,5 +1,5 @@
 import React from "react";
-import { projectsData, ProjectsInterface } from "../Data";
+import { projectsData, ProjectsInterface } from "../ProjectsData";
 
 const Projects: React.FC<{}> = () => {
   const projectsObject: JSX.Element[] = projectsData.map((projects: ProjectsInterface, idx: number) => {
