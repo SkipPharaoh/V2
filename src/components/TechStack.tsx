@@ -8,7 +8,6 @@ const TechStack: React.FC<{}> = () => {
         <li>JavaScript (ES6+)</li>
         <li>TypeScript</li>
         <li>React</li>
-        <li>React Native</li>
         <li>GraphQL</li>
         <li>Material UI</li>
       </ul>
