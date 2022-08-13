@@ -1,4 +1,4 @@
-import headshot from '../assets/headshot.png'
+// import headshot from '../assets/headshot.png'
 
 const About: React.FC<{}> = () => {
   return (
@@ -15,7 +15,7 @@ const About: React.FC<{}> = () => {
                     A software engineer with a passion and tenacity for problem-solving. Currently, I'm solving interesting problems & building amazing products at <a href="https://offerup.com/"><b>OfferUP</b></a>.
                 </p>
             </div>
-            <img src={headshot} alt="Handsome Fellow"/>
+            {/* <img src={headshot} alt="Handsome Fellow"/> */}
         </div>
         <div>
             <div>

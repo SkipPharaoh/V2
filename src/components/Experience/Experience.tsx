@@ -1,5 +1,5 @@
 import React from 'react'
-import { workData, WorkInterface } from '../WorkData'
+import { workData, WorkInterface } from '../../WorkData'
 
 // Create a work.ts file like data.ts file
 // Map through the work array and log each item here
