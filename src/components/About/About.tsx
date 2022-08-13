@@ -23,17 +23,16 @@ const About: React.FC<{}> = () => {
 
         {/* About Me Section */}
         <p>
-          Hello, most of my friends call me Skip and I'm a recent graduate of
-          General Assembly's full-time software engineering immersive Bootcamp.
-          I have a passion and tenacity for problem-solving, which feeds my
-          creativity.
+          Hello, most of my friends call me Skip & I have a passion for
+          problem-solving, which feeds my creativity. My interest for software
+          development started when I came across Google's courses available on
+          Coursera. That led me to take a course available on Coursera by MIT
+          called 'Python For Everyone.' Fast-forward to today, and I've had the
+          privilege of building and exploring some of the many tools available
+          to software developers.
         </p>
         <p>
-          My interest for software developing started when I came across
-          Google's courses available on Coursera. That led me to take a course
-          available on Coursera by MIT called 'Python For Everyone.'
-          Fast-forward to today, and I've had the privilege of building and
-          exploring some of the many tools available to software developers.
+          I enjoy building projects in TypeScript on the internet. I'm currently diving deep into TypeScript & starting to contribute to Open-Source Projects. My goal is to create my own Open-Source project that will benefit many users.
         </p>
         <p>
           I am currently focusing on building amazing digital experiences at{" "}
