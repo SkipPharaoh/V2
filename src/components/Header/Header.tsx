@@ -15,15 +15,15 @@ const Header: React.FC<{}> = () => {
             <a href="#about">
                 About
             </a>
-            <a href="#skills">
-                Skills
+            <a href="#experience">
+                Experience
             </a>
             <a href="#projects">
                 Projects
             </a>
         </div>
         <div>
-            <a href={require('../assets/docs/Resume.pdf')} target='_blank' rel="noopener noreferrer">
+            <a href={require('../../assets/docs/Resume.pdf')} target='_blank' rel="noopener noreferrer">
                 Resume
             </a>
         </div>
