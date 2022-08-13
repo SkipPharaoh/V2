@@ -32,7 +32,10 @@ const About: React.FC<{}> = () => {
           to software developers.
         </p>
         <p>
-          I enjoy building projects in TypeScript on the internet. I'm currently diving deep into TypeScript & starting to contribute to Open-Source Projects. My goal is to create my own Open-Source project that will benefit many users.
+          I enjoy building projects in TypeScript on the internet. I'm currently
+          diving deep into TypeScript & starting to contribute to Open-Source
+          Projects. My goal is to create my own Open-Source project that will
+          benefit many users.
         </p>
         <p>
           I am currently focusing on building amazing digital experiences at{" "}
