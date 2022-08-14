@@ -1,5 +1,6 @@
 import React from 'react';
 import About from '../About/About';
+import Contact from '../Contact/Contact';
 import Experience from '../Experience/Experience';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
@@ -16,6 +17,7 @@ const Home: React.FC<{}> = () => {
         <TechStack />
         <Experience />
         <Projects />
+        <Contact />
         <SideFooter />
         <Footer />
     </div>
