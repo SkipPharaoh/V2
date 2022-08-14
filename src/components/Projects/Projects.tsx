@@ -54,7 +54,7 @@ const Projects: React.FC<{}> = () => {
   );
 
   return (
-    <div>
+    <div id="projects">
       <h1>Projects I've Built</h1>
       {projectsObject}
     </div>
