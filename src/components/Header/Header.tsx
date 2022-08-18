@@ -1,11 +1,21 @@
 import * as React from "react";
-import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Avatar, Button, MenuItem } from "@mui/material";
-import Logo from '../../assets/logo.png';
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  Container,
+  Avatar,
+  Button,
+  IconButton,
+  Menu,
+  MenuItem,
+} from "@mui/material";
+import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import Logo from "../../assets/logo.png";
 
-const pages: string[] = ['about', 'experience', 'projects', 'contact', 'resume'];
+const pages: string[] = ["about", "experience", "projects", "contact"];
 
 const Header: React.FC<{}> = () => {
-
   const [anchorNav, setAnchorNav] = React.useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -17,24 +27,47 @@ const Header: React.FC<{}> = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{backgroundColor: "black"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Avatar sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} src={Logo}/>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Button href="/">
+            <Avatar sx={{ display: { xs: "flex" }, mr: 1, outline: "solid", color: "white" }} src={Logo} />
+          </Button>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", sm: "flex" },
+              justifyContent: "center",
+            }}
+          >
             {pages.map((page: string) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
                 href={`#${page}`}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: "white", display: "block" }}
               >
                 {page}
               </Button>
             ))}
           </Box>
+          <Box sx={{ display: { xs: "none", sm: "flex" } }}>
+            <Button
+              href={require("../../assets/docs/Resume.pdf")}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ my: 2, color: "white", display: "block", outline: "solid" }}
+            >
+              Resume
+            </Button>
+          </Box>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', lg: 'none', sm: 'none' } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", lg: "none", sm: "none" },
+              justifyContent: "flex-end",
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -43,59 +76,45 @@ const Header: React.FC<{}> = () => {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <Avatar src="https://www.gstatic.com/images/branding/product/1x/keep_48dp.png" />
+              <MenuOutlinedIcon fontSize="large" />
             </IconButton>
             <Menu
               id="menu-appbar"
               anchorEl={anchorNav}
               anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
+                vertical: "bottom",
+                horizontal: "left",
               }}
               keepMounted
               transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
+                vertical: "top",
+                horizontal: "left",
               }}
               open={Boolean(anchorNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' },
+                display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
+              {pages.map((page: string) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Button href={`#${page}`}>{page}</Button>
                 </MenuItem>
               ))}
+              <MenuItem
+                onClick={handleCloseNavMenu}
+              >
+                <Button
+                href={require("../../assets/docs/Resume.pdf")}
+                target="_blank"
+                rel="noopener noreferrer"
+                >Resume</Button>
+              </MenuItem>
             </Menu>
           </Box>
         </Toolbar>
       </Container>
     </AppBar>
-      // <div>
-      //   <a href="/">
-      //     <img
-      //       src="https://www.gstatic.com/images/branding/product/1x/keep_48dp.png"
-      //       alt="Keep"
-      //     />
-      //   </a>
-      // </div>
-      // <div>
-      //   <a href="#about">About</a>
-      //   <a href="#experience">Experience</a>
-      //   <a href="#projects">Projects</a>
-      //   <a href="#contact">Contact</a>
-      // </div>
-      // <div>
-      //   <a
-      //     href={require("../../assets/docs/Resume.pdf")}
-      //     target="_blank"
-      //     rel="noopener noreferrer"
-      //   >
-      //     Resume
-      //   </a>
-      // </div>
   );
 };
 
