@@ -2,7 +2,7 @@
 
 const About: React.FC<{}> = () => {
   return (
-    <div className="About">
+    <div id="about">
       <div>
         <h3>Hi, my name is</h3>
         <h1>Caniggia Thompson.</h1>
