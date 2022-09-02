@@ -15,7 +15,7 @@ import Logo from "../../assets/logo.png";
 
 const pages: string[] = ["about", "experience", "projects", "contact"];
 
-const Header: React.FC<{}> = () => {
+export const Header = (): JSX.Element => {
   const [anchorNav, setAnchorNav] = React.useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
