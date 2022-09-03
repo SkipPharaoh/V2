@@ -1,17 +1,16 @@
-import React from "react";
-import Logo from "../../assets/logo.png";
+import Logo from '../../assets/logo.png';
 
-const Footer: React.FC<{}> = () => {
-  return (
-    <footer>
-      <a href="/">
-        <img src={Logo} alt="Logo" />
-      </a>
+const Footer = (): JSX.Element => {
+	return (
+		<footer>
+			<a href="/">
+				<img src={Logo} alt="Logo" />
+			</a>
 
-      <p>Built & Designed by Caniggia Thompson</p>
-      <p>&copy; All rights reserved</p>
-    </footer>
-  );
+			<p>Built & Designed by Caniggia Thompson</p>
+			<p>&copy; All rights reserved</p>
+		</footer>
+	);
 };
 
 export default Footer;
