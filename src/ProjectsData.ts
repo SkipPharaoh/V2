@@ -7,7 +7,7 @@ export interface ProjectsInterface {
 	app: string;
 }
 
-export const projectsData: Array<ProjectsInterface> = [
+export const projectsData: ProjectsInterface[] = [
 	{
 		title: 'Personal Website',
 		tech: ['React', 'TailwindCSS'],

@@ -1,4 +1,4 @@
-const SideFooter: React.FC<{}> = () => {
+const SideFooter = (): JSX.Element => {
 	return (
 		<div>
 			{/* GITHUB */}

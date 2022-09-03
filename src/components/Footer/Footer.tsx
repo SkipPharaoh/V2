@@ -1,7 +1,6 @@
-import React from 'react';
 import Logo from '../../assets/logo.png';
 
-const Footer: React.FC<{}> = () => {
+const Footer = (): JSX.Element => {
 	return (
 		<footer>
 			<a href="/">

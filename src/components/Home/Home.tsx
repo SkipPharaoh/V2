@@ -1,4 +1,3 @@
-import React from 'react';
 import About from '../About/About';
 import Contact from '../Contact/Contact';
 import Experience from '../Experience/Experience';
@@ -8,7 +7,7 @@ import Projects from '../Projects/Projects';
 import SideFooter from '../SideFooter/SideFooter';
 import TechStack from '../TechStack/TechStack';
 
-const Home: React.FC<{}> = () => {
+const Home = (): JSX.Element => {
 	return (
 		<div>
 			<Header />

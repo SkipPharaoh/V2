@@ -6,7 +6,7 @@ export interface WorkInterface {
 	description: string[];
 }
 
-export const workData: Array<WorkInterface> = [
+export const workData: WorkInterface[] = [
 	{
 		company: 'OfferUp',
 		position: 'Software Development Engineer',

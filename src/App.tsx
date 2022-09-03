@@ -1,8 +1,7 @@
-import React from 'react';
 import Home from './components/Home/Home';
 import { Routes, Route } from 'react-router-dom';
 
-const App: React.FC<{}> = () => {
+const App = (): JSX.Element => {
 	return (
 		<div>
 			<Routes>

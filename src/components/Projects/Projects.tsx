@@ -1,7 +1,6 @@
-import React from 'react';
 import { projectsData, ProjectsInterface } from '../../ProjectsData';
 
-const Projects: React.FC<{}> = () => {
+const Projects = (): JSX.Element => {
 	const projectsObject: JSX.Element[] = projectsData.map(
 		(projects: ProjectsInterface, idx: number) => {
 			const Tech: JSX.Element[] = projects.tech.map(

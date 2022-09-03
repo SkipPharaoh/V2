@@ -15,7 +15,7 @@ import Logo from '../../assets/logo.png';
 
 const pages: string[] = ['about', 'experience', 'projects', 'contact'];
 
-const Header: React.FC<{}> = () => {
+const Header = (): JSX.Element => {
 	const [anchorNav, setAnchorNav] = React.useState<null | HTMLElement>(null);
 
 	const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -60,6 +60,7 @@ const Header: React.FC<{}> = () => {
 					</Box>
 					<Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
 						<Button
+							// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 							href={require('../../assets/docs/Resume.pdf')}
 							target="_blank"
 							rel="noopener noreferrer"
@@ -111,6 +112,7 @@ const Header: React.FC<{}> = () => {
 							))}
 							<MenuItem onClick={handleCloseNavMenu}>
 								<Button
+									// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 									href={require('../../assets/docs/Resume.pdf')}
 									target="_blank"
 									rel="noopener noreferrer"

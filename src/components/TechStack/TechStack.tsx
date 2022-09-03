@@ -1,4 +1,4 @@
-const TechStack: React.FC<{}> = () => {
+const TechStack = (): JSX.Element => {
 	return (
 		<div>
 			<h3>Tech stack I've currently been working with:</h3>
