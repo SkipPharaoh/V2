@@ -16,13 +16,15 @@ import { Link } from 'react-router-dom';
 
 const pages: string[] = ['about', 'experience', 'projects', 'contact'];
 
-const LinkStyle = {
+type LinkStyleType = Record<string, string | number>;
+
+const LinkStyle: LinkStyleType = {
 	my: 2,
 	color: 'white',
 	display: 'block'
 };
 
-const MenuStyle = {
+const MenuStyle: LinkStyleType = {
 	color: 'Blue'
 };
 
