@@ -51,7 +51,7 @@ const Header = (): JSX.Element => {
 						{pages.map((page: string) => (
 							<Button
 								key={page}
-								href={`#${page}`}
+								href={`/${page}`}
 								sx={{ my: 2, color: 'white', display: 'block' }}
 							>
 								{page}
@@ -107,7 +107,7 @@ const Header = (): JSX.Element => {
 						>
 							{pages.map((page: string) => (
 								<MenuItem key={page} onClick={handleCloseNavMenu}>
-									<Button href={`#${page}`}>{page}</Button>
+									<Button href={`/${page}`}>{page}</Button>
 								</MenuItem>
 							))}
 							<MenuItem onClick={handleCloseNavMenu}>
