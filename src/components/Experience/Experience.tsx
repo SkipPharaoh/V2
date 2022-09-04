@@ -21,7 +21,7 @@ const Experience = (): JSX.Element => {
 					<p>
 						{work.startDate} - {work.endDate}
 					</p>
-					<p>{workDescription}</p>
+					<>{workDescription}</>
 				</div>
 			);
 		}
