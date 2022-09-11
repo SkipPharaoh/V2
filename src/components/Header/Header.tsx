@@ -12,8 +12,22 @@ import {
 } from '@mui/material';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import Logo from '../../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 const pages: string[] = ['about', 'experience', 'projects', 'contact'];
+
+type LinkStyleType = Record<string, string | number>;
+
+const LinkStyle: LinkStyleType = {
+	my: 2,
+	color: 'white',
+	display: 'block'
+};
+
+const MenuStyle: LinkStyleType = {
+	color: '#3877CB',
+	textDecoration: 'none'
+};
 
 const Header = (): JSX.Element => {
 	const [anchorNav, setAnchorNav] = React.useState<null | HTMLElement>(null);
@@ -30,7 +44,7 @@ const Header = (): JSX.Element => {
 		<AppBar position="static" sx={{ backgroundColor: 'black' }}>
 			<Container maxWidth="xl">
 				<Toolbar disableGutters>
-					<Button href="/">
+					<Link to="/">
 						<Avatar
 							sx={{
 								display: { xs: 'flex' },
@@ -40,7 +54,7 @@ const Header = (): JSX.Element => {
 							}}
 							src={Logo}
 						/>
-					</Button>
+					</Link>
 					<Box
 						sx={{
 							flexGrow: 1,
@@ -51,10 +65,12 @@ const Header = (): JSX.Element => {
 						{pages.map((page: string) => (
 							<Button
 								key={page}
-								href={`/${page}`}
 								sx={{ my: 2, color: 'white', display: 'block' }}
 							>
-								{page}
+								<Link to={`/${page}`} style={LinkStyle}>
+									{page}
+								</Link>
+								{/* {page} */}
 							</Button>
 						))}
 					</Box>
@@ -107,7 +123,11 @@ const Header = (): JSX.Element => {
 						>
 							{pages.map((page: string) => (
 								<MenuItem key={page} onClick={handleCloseNavMenu}>
-									<Button href={`/${page}`}>{page}</Button>
+									<Button>
+										<Link to={`/${page}`} style={MenuStyle}>
+											{page}
+										</Link>
+									</Button>
 								</MenuItem>
 							))}
 							<MenuItem onClick={handleCloseNavMenu}>
