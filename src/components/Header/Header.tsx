@@ -25,7 +25,8 @@ const LinkStyle: LinkStyleType = {
 };
 
 const MenuStyle: LinkStyleType = {
-	color: 'Blue'
+	color: '#3877CB',
+	textDecoration: 'none'
 };
 
 const Header = (): JSX.Element => {
@@ -64,7 +65,6 @@ const Header = (): JSX.Element => {
 						{pages.map((page: string) => (
 							<Button
 								key={page}
-								// href={`/${page}`}
 								sx={{ my: 2, color: 'white', display: 'block' }}
 							>
 								<Link to={`/${page}`} style={LinkStyle}>
