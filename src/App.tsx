@@ -1,16 +1,13 @@
-import React from 'react';
-import Home from './components/Home/Home';
-import { Routes, Route } from 'react-router-dom';
+import Header from './components/Header/Header';
+import PageRoutes from './utilities/PageRoutes';
 
-const App: React.FC<{}> = () => {
-
-  return (
-    <div>
-      <Routes>
-        <Route path='/' element={<Home />} />
-      </Routes>
-    </div>
-  );
-}
+const App = (): JSX.Element => {
+	return (
+		<div>
+			<Header />
+			<PageRoutes />
+		</div>
+	);
+};
 
 export default App;
