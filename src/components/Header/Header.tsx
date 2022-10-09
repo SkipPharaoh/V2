@@ -16,6 +16,8 @@ import { Link } from 'react-router-dom';
 
 const pages: string[] = ['about', 'experience', 'projects', 'contact'];
 
+export const Header = (): JSX.Element => {
+  const [anchorNav, setAnchorNav] = React.useState<null | HTMLElement>(null);
 type LinkStyleType = Record<string, string | number>;
 
 const LinkStyle: LinkStyleType = {
