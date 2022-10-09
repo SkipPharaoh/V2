@@ -27,11 +27,19 @@ export const Header = (): JSX.Element => {
   };
 
   return (
-    <AppBar position="static" sx={{backgroundColor: "black"}}>
+    <AppBar position="static" sx={{ backgroundColor: "black" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Button href="/">
-            <Avatar sx={{ display: { xs: "flex" }, mr: 1, outline: "solid", color: "white" }} src={Logo} />
+            <Avatar
+              sx={{
+                display: { xs: "flex" },
+                mr: 1,
+                outline: "solid",
+                color: "white",
+              }}
+              src={Logo}
+            />
           </Button>
           <Box
             sx={{
@@ -101,14 +109,14 @@ export const Header = (): JSX.Element => {
                   <Button href={`#${page}`}>{page}</Button>
                 </MenuItem>
               ))}
-              <MenuItem
-                onClick={handleCloseNavMenu}
-              >
+              <MenuItem onClick={handleCloseNavMenu}>
                 <Button
-                href={require("../../assets/docs/Resume.pdf")}
-                target="_blank"
-                rel="noopener noreferrer"
-                >Resume</Button>
+                  href={require("../../assets/docs/Resume.pdf")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Resume
+                </Button>
               </MenuItem>
             </Menu>
           </Box>
