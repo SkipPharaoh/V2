@@ -13,13 +13,13 @@ const CategoryCard = forwardRef<HTMLDivElement, CategoryCardProps>(
           Develop
         </div>
         <div className=" bg-gradient-to-l from-[#e7ffdc] to-[#ddfff8] rounded-[0.89rem] px-2 md:px-3 md:py-1 text-[#097360]">
-          Design
+          Invest
         </div>
         <div className=" bg-gradient-to-l from-[#cde1ff] to-[#f9d2ff] rounded-[0.89rem] px-2 md:px-3 md:py-1 text-[#4e0aa2]">
           Anime
         </div>
         <div className=" bg-gradient-to-l from-[#ffdaf9] to-[#ffdcdc] rounded-[0.89rem] px-2 md:px-3 md:py-1 text-[#690c58]">
-          Psychology
+          Philosophy
         </div>
       </div>
     );

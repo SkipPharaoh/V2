@@ -1,4 +1,4 @@
-import { ElementRef, forwardRef } from "react";
+import { forwardRef } from "react";
 
 interface BlobProps {}
 
