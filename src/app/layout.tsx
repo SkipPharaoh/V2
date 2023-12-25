@@ -45,7 +45,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="land relative z-10">{children}</body>
+      <body className="back font-out mx-auto bg-[#fffdfd] dark:bg-[#242424] overflow-x-hidden lg:transform-gpu">
+        <main className="land relative z-10">{children}</main>
+      </body>
     </html>
   );
 }
