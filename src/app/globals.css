@@ -23,12 +23,12 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  @apply bg-purple-400/50 rounded-[4px];
+  @apply bg-red-400/50 rounded-[4px];
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-purple-400;
+  @apply bg-red-400;
 }
 
 @layer base {

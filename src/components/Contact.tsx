@@ -2,7 +2,7 @@ import Image from "next/image";
 import { forwardRef } from "react";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { TfiLinkedin, TfiTwitterAlt } from "react-icons/tfi";
-import ChatBubble from "../../public/assets/ChatBubble.svg";
+import ChatBubble from "../../public/assets/icons/chat-bubble.svg";
 
 interface ContactProps {}
 
@@ -11,6 +11,7 @@ const Contact = forwardRef<HTMLDivElement, ContactProps>(
     return (
       <div
         ref={ref}
+        {...props}
         className="h-max xl:px-12 lg:h-[22rem] p-6 sm:p-8 md:px-10 pt-32 md:pt-40 lg:pt-10 bg-gradient-to-tr dark:from-[#f6ebeb20] dark:to-[#fff8ec20] from-[#f6ebeb90] to-[#fff8ec60] flex flex-col lg:flex-row mx-auto rounded-3xl shadow-md drop-shadow-2xl backdrop-blur-xl items-center justify-center lg:justify-between "
       >
         <div className="order-2 sm:w-[75%] lg:w-[80%] lg:basis-[60%] flex flex-col space-y-6 cirGradient bg-clip-text">
