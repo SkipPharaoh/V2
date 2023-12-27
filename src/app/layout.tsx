@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ThemeProvider } from "../components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: {
@@ -46,7 +47,14 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="back font-out mx-auto bg-[#fffdfd] dark:bg-[#242424] overflow-x-hidden lg:transform-gpu">
-        <main className="land relative z-10">{children}</main>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <main className="land relative z-10">{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );
