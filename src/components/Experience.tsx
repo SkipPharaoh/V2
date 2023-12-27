@@ -139,6 +139,7 @@ const Experience = forwardRef<HTMLDivElement, ContactProps>(
           </div>
           <div className="flex justify-center space-x-3 md:space-x-6 lg:space-x-8 items-center  my-4">
             <div className="group border-red-400 hover:bg-red-400 hover:text-white hover:drop-shadow-2xl text-red-500 rounded-md md:rounded-xl px-2 py-1 md:px-4 md:py-2 shadow-md drop-shadow-lg dark:bg-red-400 dark:shadow-none dark:hover:shadow-white select-none dark:text-white shadow-red-300 ">
+              {/* // TODO: Create Resume page/route & change the href to match */}
               <Link
                 href="/Pranjal_Shikhar_Sinha.pdf"
                 target="_blank"
