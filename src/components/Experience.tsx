@@ -6,8 +6,8 @@ import { FiFileText } from "react-icons/fi";
 import SvgIcon from "./SvgIcon";
 
 // TODO: Add appropriate PNG image to replace both Mock images below
-import NextMockIcon from "../../public/next.svg";
-import VercelMockIcon from "../../public/vercel.svg";
+import NextMockIcon from "/public/assets/icons/next.svg";
+import VercelMockIcon from "/public/assets/icons/vercel.svg";
 
 interface ContactProps {}
 

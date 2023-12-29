@@ -1,5 +1,6 @@
 "use client";
 
+import useDarkMode from "@/hooks/useDarkMode";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -10,7 +11,6 @@ import {
   useState,
 } from "react";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
-import { useTheme } from "next-themes";
 
 interface Link {
   name: string;
@@ -20,7 +20,7 @@ interface Link {
 interface HeaderProps {}
 
 const Header = forwardRef<HTMLDivElement, HeaderProps>(({ ...props }, ref) => {
-  const { systemTheme, theme, setTheme } = useTheme();
+  const { setTheme, currentTheme } = useDarkMode();
   const pathName = usePathname();
   const [mounted, setMounted] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -79,8 +79,6 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>(({ ...props }, ref) => {
 
   if (!mounted) return null;
 
-  const currentTheme = theme === "system" ? systemTheme : theme;
-
   const setRefs = (node: HTMLDivElement | null) => {
     if (node) {
       // Set the ref for the nav element
@@ -112,7 +110,9 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>(({ ...props }, ref) => {
             ) : (
               <Image src={pranjal_header_black} alt="header" width="100" />
             )} */}
-            <h1 className="text-black dark:text-white">Caniggia</h1>
+            <h1 className="text-black dark:text-white duration-300 ease-in hover:text-red-500 dark:hover:text-blue-500">
+              Caniggia
+            </h1>
           </Link>
         </div>
         {currentTheme === "dark" ? (
@@ -120,39 +120,39 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>(({ ...props }, ref) => {
             onClick={() => {
               setTheme("light");
             }}
-            className="w-max md:order-8 fill-red-600 "
+            className="w-max md:order-8 fill-red-500 "
           >
-            <MdLightMode className="w-5 h-5 lg:w-6 lg:h-6 fill-white " />{" "}
+            <MdLightMode className="w-5 h-5 lg:w-6 lg:h-6 fill-white hover:fill-blue-400 duration-300 ease-in" />{" "}
           </button>
         ) : (
           <button
             onClick={() => {
               setTheme("dark");
             }}
-            className="w-max md:order-8 fill-red-600 "
+            className="w-max md:order-8 fill-blue-400"
           >
-            <MdDarkMode className="w-5 h-5 lg:w-6 lg:h-6 fill-black " />{" "}
+            <MdDarkMode className="w-5 h-5 lg:w-6 lg:h-6 fill-black hover:fill-red-500 duration-300 ease-in" />{" "}
           </button>
         )}
 
         <div
           onClick={() => setOpen(!open)}
-          className="transition-all duration-500 ease-in order-3 text-lg flex flex-col space-y-[0.2rem]  cursor-pointer items-center font-semibold md:hidden"
+          className="group transition-all duration-500 ease-in order-3 text-lg flex flex-col space-y-[0.2rem]  cursor-pointer items-center font-semibold md:hidden"
         >
           <div
             className={` ${
               open && "rotate-45 translate-y-[5px] "
-            } relative rounded-xl origin-center transition-all duration-500 ease-in w-4 h-[0.1125rem] dark:bg-white/70 dark:text-white/70 fill-black text-black bg-black`}
+            } relative rounded-xl origin-center transition-all duration-300 ease-in w-4 h-[0.1125rem] dark:bg-white/70 dark:text-white/70 fill-black text-black bg-black group-hover:bg-red-500 dark:group-hover:bg-blue-500`}
           ></div>
           <div
             className={` ${
               open && "opacity-0 translate-x-20"
-            } relative rounded-xl origin-center transition-all duration-1000 ease-in-out w-4 h-[0.1rem] dark:bg-white/70 dark:text-white/70 fill-black text-black bg-black `}
+            } relative rounded-xl origin-center transition-all duration-500 ease-in-out w-4 h-[0.1rem] dark:bg-white/70 dark:text-white/70 fill-black text-black bg-black group-hover:bg-red-500 dark:group-hover:bg-blue-500`}
           ></div>
           <div
             className={` ${
               open && "-rotate-45 -translate-y-[5px]"
-            } relative rounded-xl origin-center transition-all duration-500 ease-in w-4 h-[0.1125rem] dark:bg-white/70 dark:text-white/70 fill-black text-black bg-black`}
+            } relative rounded-xl origin-center transition-all duration-300 ease-in w-4 h-[0.1125rem] dark:bg-white/70 dark:text-white/70 fill-black text-black bg-black group-hover:bg-red-500 dark:group-hover:bg-blue-500`}
           ></div>
         </div>
         <ul
@@ -172,7 +172,7 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>(({ ...props }, ref) => {
                   pathName === link.link
                     ? " text-red-400 font-semibold "
                     : " text-gray-700 dark:text-white "
-                } hover:text-red-500 dark:hover:text-red-500 duration-500`}
+                } hover:text-red-500 dark:hover:text-blue-500 duration-500`}
               >
                 {link.name}
               </Link>
@@ -186,7 +186,7 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>(({ ...props }, ref) => {
               href="/Caniggia_Thompson_Resume.pdf"
               target="_blank"
               rel="noreferrer"
-              className="text-gray-800 dark:text-white hover:text-red-500 dark:hover:text-red-500 duration-500"
+              className="text-gray-800 dark:text-white hover:text-red-500 dark:hover:text-blue-500 duration-500"
             >
               resume
             </a>

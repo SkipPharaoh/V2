@@ -1,6 +1,8 @@
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import type { Metadata } from "next";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
-import { ThemeProvider } from "../components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: {
@@ -53,7 +55,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="land relative z-10">{children}</main>
+          <main className="land relative z-10">
+            <Header />
+            {children}
+            <Footer />
+          </main>
         </ThemeProvider>
       </body>
     </html>
