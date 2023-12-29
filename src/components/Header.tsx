@@ -183,7 +183,7 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>(({ ...props }, ref) => {
             className="md:ml-8  text-base xl:text-[1.1rem] font-regular md:my-0 my-7"
           >
             <a
-              href="/Caniggia_Thompson.pdf"
+              href="/Caniggia_Thompson_Resume.pdf"
               target="_blank"
               rel="noreferrer"
               className="text-gray-800 dark:text-white hover:text-red-500 dark:hover:text-red-500 duration-500"
