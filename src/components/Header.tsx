@@ -170,7 +170,7 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>(({ ...props }, ref) => {
                 onClick={() => clickHandler(`${link.name}`)}
                 className={`${
                   pathName === link.link
-                    ? " text-red-400 font-semibold "
+                    ? " text-red-500 font-semibold "
                     : " text-gray-700 dark:text-white "
                 } hover:text-red-500 dark:hover:text-blue-500 duration-500`}
               >
