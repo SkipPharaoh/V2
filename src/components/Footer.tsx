@@ -85,7 +85,7 @@ const Footer = forwardRef<HTMLDivElement, FooterProps>(({ ...props }, ref) => {
         href="https://github.com/SkipPharaoh/v2"
         target="blank"
         rel="noreferrer"
-        className="flex flex-col text-center group hover:text-red-400 w-max hover:font-black items-center text-gray-600 text-[0.6rem] sm:text-xs md:text-sm lg:text-md mt-8 md:mt-12 "
+        className="flex flex-col text-center group hover:text-red-500 w-max hover:font-black items-center text-gray-600 text-[0.6rem] sm:text-xs md:text-sm lg:text-md mt-8 md:mt-12 "
       >
         <div
           onMouseOut={handleMouseOut}
@@ -108,14 +108,14 @@ const Footer = forwardRef<HTMLDivElement, FooterProps>(({ ...props }, ref) => {
           )}
         </div>
         <div className="flex space-x-4 dark:text-white text-black">
-          <div className="flex dark:group-hover:text-blue-400 group-hover:text-red-400  space-x-1 items-center ">
-            <FaRegStar className="h-4 w-4 group-hover:stroke-[2.2px] dark:group-hover:fill-blue-400  group-hover:fill-red-400 " />
+          <div className="flex dark:group-hover:text-blue-400 group-hover:text-red-500  space-x-1 items-center ">
+            <FaRegStar className="h-4 w-4 group-hover:stroke-[2.2px] dark:group-hover:fill-blue-400  group-hover:fill-red-500 " />
             <p className="font-semibold text-sm group-hover:font-extrabold ">
               {metaData.star}
             </p>
           </div>
-          <div className="flex  dark:group-hover:text-blue-400 group-hover:text-red-400 space-x-1 items-center ">
-            <FiGitBranch className="h-4 w-4 group-hover:stroke-[2.2px]  dark:group-hover:stroke-blue-400 group-hover:stroke-red-400 " />
+          <div className="flex  dark:group-hover:text-blue-400 group-hover:text-red-500 space-x-1 items-center ">
+            <FiGitBranch className="h-4 w-4 group-hover:stroke-[2.2px]  dark:group-hover:stroke-blue-400 group-hover:stroke-red-500 " />
             <p className="font-semibold text-sm group-hover:font-extrabold ">
               {metaData.forks}
             </p>
