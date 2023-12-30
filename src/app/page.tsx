@@ -1,8 +1,8 @@
-import Experience from "@/components/Experience";
 import Blob from "@/components/Blob";
 import Contact from "@/components/Contact";
+import Experience from "@/components/Experience";
 
-export default function Home() {
+export default function HomePage() {
   // const { theme, currentTheme } = useDarkMode();
 
   return (

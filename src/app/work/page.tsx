@@ -1,8 +1,7 @@
 import ProjectCard from "@/components/ProjectCard";
 import SvgIcon from "@/components/SvgIcon";
-import React from "react";
 
-export default function page() {
+export default function WorkPage() {
   return (
     <div className="px-10 sm:px-20 md:px-32 md:-mb-52 lg:mb-0 lg:px-60 mx-auto max-w-[75rem]">
       <main className="min-h-screen max-w-screen">
@@ -12,7 +11,7 @@ export default function page() {
           </h2>
           <p className="mt-8 max-w-xl text-center md:w-[70%] mx-auto text-sm font-normal md:text-base lg:text-lg mb-2">
             It has been an absolute pleasure to put my heart and soul into these
-            projects. While you&#39;re here, browse these projects.
+            projects. While you&#39;re here, browse these projects. 💖
           </p>
           <div className="select-none flex justify-center space-x-4 items-center mt-2 text-gray-400">
             <SvgIcon

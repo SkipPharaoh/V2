@@ -5,6 +5,8 @@ import { type ThemeProviderProps } from "next-themes/dist/types";
 import { useEffect } from "react";
 
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
+  // TODO: Add switch case for the useEffect below for when the user is on dfferent routes
+
   useEffect(() => {
     console.clear();
     console.log.apply(console, [
