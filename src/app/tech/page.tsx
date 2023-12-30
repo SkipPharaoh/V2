@@ -1,13 +1,13 @@
 "use client";
 
 import TechCard from "@/components/TechCard";
+import { techData } from "@public/Tech";
 import Image from "next/image";
 import { useState } from "react";
 import {
   HiOutlineArrowLongLeft,
   HiOutlineArrowLongRight,
 } from "react-icons/hi2";
-import { techData } from "../../../public/Tech";
 
 export default function TechPage() {
   // TODO: abstract the useState with the changeId, rightArrow, & leftArrow to a custom hook
@@ -36,7 +36,7 @@ export default function TechPage() {
     <div className="min-h-[75vh] md:min-h-[73vh] px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 xl:px-80 mx-auto">
       <main className="max-w-screen max-w-5xl mx-auto">
         <div className="pt-24 flex flex-col mx-auto">
-          <h2 className="bg-gradient-to-br dark:selection:text-white/80 selection:text-black/70 to-yellow-200 from-red-500 bg-clip-text text-transparent items-center mx-auto text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-deca font-bold ">
+          <h2 className="bg-gradient-to-br dark:selection:text-white/80 selection:text-black/70 to-yellow-500 dark:to-yellow-200 from-blue-700 dark:from-red-500 bg-clip-text text-transparent items-center mx-auto text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-deca font-bold ">
             Tech Stack
           </h2>
           <p className="mt-8 font-normal lg:text-lg text-center md:w-[70%] mx-auto text-base md:text-[1.15rem] ">
