@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { forwardRef } from "react";
+import { FaTiktok } from "react-icons/fa";
 import { MdOutlineAlternateEmail } from "react-icons/md";
-import { TfiLinkedin, TfiTwitterAlt } from "react-icons/tfi";
+import { TfiLinkedin } from "react-icons/tfi";
 import ChatBubble from "../../public/assets/icons/chat-bubble.svg";
 
 interface ContactProps {}
@@ -25,13 +26,13 @@ const Contact = forwardRef<HTMLDivElement, ContactProps>(
           </p>
           <div className="grid grid-cols-3 text-[0.7rem] md:text-[0.85rem] lg:text-base gap-2 md:gap-3 lg:gap-4">
             <a
-              href="https://twitter.com/SKIP_Pharaoh"
+              href="https://www.tiktok.com/@skip_pharaoh"
               target="_blank"
               className=" flex align-middle items-center font-jak font-bold space-x-1 w-max "
             >
-              <TfiTwitterAlt className="text-[#518FC7] dark:text-[#f87171] h-3 w-3 md:h-4 md:w-4 " />
-              <h5 className="text-transparent text-[#518FC7] dark:text-[#f87171]">
-                Twitter
+              <FaTiktok className="text-[#0077B5] dark:text-[#f87171] h-3 w-3 md:h-4 md:w-4 " />
+              <h5 className="text-transparent text-[#0077B5] dark:text-[#f87171]">
+                TikTok
               </h5>
             </a>
             <a
