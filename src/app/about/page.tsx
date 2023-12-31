@@ -6,11 +6,11 @@ import Flash from "@public/assets/icons/flash.svg";
 import Game from "@public/assets/icons/game.svg";
 import Growth from "@public/assets/icons/growth-investment.svg";
 import Laptop from "@public/assets/icons/laptop.svg";
+import LoveGesture from "@public/assets/icons/love-gesture.svg";
 import Rocket from "@public/assets/icons/rocket.svg";
 import Sparkles from "@public/assets/icons/sparkles.svg";
 import Thinking from "@public/assets/icons/thinking.svg";
 import AboutImage from "@public/assets/images/my-pic3.png";
-import LoveGesture from "@public/assets/icons/love-gesture.svg";
 import Image from "next/image";
 
 export default function AboutPage() {
