@@ -28,9 +28,9 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>(({ ...props }, ref) => {
   const touchRef = useRef<HTMLDivElement | null>(null);
 
   let Links: Link[] = [
-    { name: "work", link: "/work" },
-    { name: "about", link: "/about" },
-    { name: "tech", link: "/tech" },
+    { name: "Work", link: "/work" },
+    { name: "About", link: "/about" },
+    { name: "Tech", link: "/tech" },
   ];
 
   const clickHandler = (link: string) => {
@@ -188,7 +188,7 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>(({ ...props }, ref) => {
               rel="noreferrer"
               className="text-gray-800 dark:text-white hover:text-red-500 dark:hover:text-blue-500 duration-500"
             >
-              resume
+              Resume
             </a>
           </li>
         </ul>
