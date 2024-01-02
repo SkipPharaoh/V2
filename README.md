@@ -1,4 +1,22 @@
-# Skip's Personal Website
+<div align="center">
+  <img alt="Logo" src="https://raw.githubusercontent.com/skippharaoh/v2/main/src/app/favicon.ico" width="60" />
+</div>
+<h1 align="center">
+  caniggiathompson.com - v2
+</h1>
+<p align="center">
+  The second iteration of <a href="https://caniggiathompson.com" target="_blank">caniggiathompson.com</a> built with <a href="https://nextjs.org/" target="_blank">Next.js</a> and hosted with <a href="https://vercel.com/" target="_blank">Vercel</a>
+</p>
+<p align="center">
+  Previous iteration:
+  <a href="https://skip.netlify.app/" target="_blank">v1</a>
+</p>
+<p align="center">
+  <a href="https://app.netlify.com/sites/brittanychiang/deploys" target="_blank">
+    <img src="https://img.shields.io/github/deployments/SkipPharaoh/v2/production?logo=vercel&logoColor=white&label=vercel
+" alt="Vercel Status" />
+  </a>
+</p>
 
 Welcome to my portfolio website! Click [here](https://www.caniggiathompson.com/) to view the website. This repository contains the source code and content for my personal portfolio.
 
