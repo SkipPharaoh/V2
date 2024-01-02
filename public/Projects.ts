@@ -46,7 +46,7 @@ export const projectsData = [
     image: Nike,
     title: "Portfolio v1",
     description: "1st iteration of this portfolio",
-    link: "https://www.caniggiathompson.com/",
+    link: "https://skip.netlify.app/",
     target: "_blank",
   },
   {
