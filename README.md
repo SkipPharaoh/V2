@@ -13,8 +13,7 @@
 </p>
 <p align="center">
   <a href="https://vercel.com/skippharaoh/skips-portfolio-v2/deployments" target="_blank">
-    <img src="https://img.shields.io/github/deployments/SkipPharaoh/v2/production?logo=vercel&logoColor=white&label=vercel
-" alt="Vercel Status" />
+    <img src="https://img.shields.io/github/deployments/SkipPharaoh/v2/production?logo=vercel&logoColor=white&label=vercel" alt="Vercel Status" />
   </a>
 </p>
 
