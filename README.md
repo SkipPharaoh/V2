@@ -12,7 +12,7 @@
   <a href="https://skip.netlify.app/" target="_blank">v1</a>
 </p>
 <p align="center">
-  <a href="https://app.netlify.com/sites/brittanychiang/deploys" target="_blank">
+  <a href="https://vercel.com/skippharaoh/skips-portfolio-v2/deployments" target="_blank">
     <img src="https://img.shields.io/github/deployments/SkipPharaoh/v2/production?logo=vercel&logoColor=white&label=vercel
 " alt="Vercel Status" />
   </a>
