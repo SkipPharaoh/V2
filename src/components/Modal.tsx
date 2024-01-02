@@ -9,7 +9,9 @@ interface ModalProps {
 
 const Modal = forwardRef<HTMLDivElement, ModalProps>(
   ({ isVisible, className, style, children }, ref) => {
-    const modalClasses = `relative z-10 ${className || ""}`;
+    const modalClasses = `fixed inset-0 flex items-center justify-center z-50 ${
+      className || ""
+    }`;
     const modalStyle = { ...style, display: isVisible ? "block" : "none" };
 
     return (
@@ -22,7 +24,7 @@ const Modal = forwardRef<HTMLDivElement, ModalProps>(
       >
         <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
 
-        <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+        <div className="fixed inset-0 z-10 w-screen h-screen overflow-y-auto">
           <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
             <div
               className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg"
