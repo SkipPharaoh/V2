@@ -1,41 +1,21 @@
 "use client";
 
 import TechCard from "@/components/TechCard";
+import useIdSwitcher from "@/hooks/useIdSwitcher";
 import { techData } from "@public/Tech";
-import { forwardRef, useState } from "react";
+import { forwardRef } from "react";
 import TechStackHeader from "./TechStackHeader";
 
 interface TechStackProps {}
 
 const TechStack = forwardRef<HTMLDivElement, TechStackProps>(
   ({ ...props }, ref) => {
-    // TODO: abstract the useState with the changeId, rightArrow, & leftArrow to a custom hook
-    const [idNumber, setIdNumber] = useState<number>(0);
-
-    const changeId = (id: number) => {
-      setIdNumber(id);
-    };
-
-    const rightArrow = () => {
-      if (idNumber + 1 >= techData.length) {
-        setIdNumber(0);
-      } else {
-        setIdNumber(idNumber + 1);
-      }
-    };
-
-    const leftArrow = () => {
-      if (idNumber === 0) {
-        setIdNumber(techData.length - 1);
-      } else {
-        setIdNumber(idNumber - 1);
-      }
-    };
+    const { techId, changeId, leftArrow, rightArrow } = useIdSwitcher();
 
     return (
       <div ref={ref} {...props}>
         <TechStackHeader
-          idNumber={idNumber}
+          idNumber={techId}
           leftArrow={leftArrow}
           rightArrow={rightArrow}
         />
