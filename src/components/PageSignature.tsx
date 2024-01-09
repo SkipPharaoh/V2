@@ -1,6 +1,5 @@
-import LoveGesture from "@public/assets/icons/love-gesture.svg";
-import Image from "next/image";
 import { forwardRef } from "react";
+import SvgIcon from "./SvgIcon";
 
 interface PageSignatureProps {}
 
@@ -15,11 +14,13 @@ const PageSignature = forwardRef<HTMLDivElement, PageSignatureProps>(
         <span className="font-black font-app text-2xl md:text-3xl align-text-bottom tracking-wider mx-3 md:mx-6">
           Peace &amp; Blessings
         </span>
-        <Image
-          src={LoveGesture}
-          alt="love"
-          width="30"
-          className="-mt-4 filter dark:invert invert-0 dark:sepia sepia-100 saturate-2500 hue-rotate-0 brightness-100 contrast-100"
+        <SvgIcon
+          icon="love-gesture"
+          width={30}
+          viewBox="0 0 512 512"
+          name="Love Gesture SVG Vector Icon"
+          attributeName="Love Gesture SVG Vector Icon"
+          className="-mt-4 filter dark:invert invert-0 dark:sepia-100 sepia-100 saturate-2500 hue-rotate-0 brightness-100 contrast-100"
         />
       </div>
     );

@@ -1,7 +1,7 @@
 "use client";
 
-import { forwardRef } from "react";
 import Image from "next/image";
+import { forwardRef } from "react";
 
 interface TechCardProps {
   id: number;

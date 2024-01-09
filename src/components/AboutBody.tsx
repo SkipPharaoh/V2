@@ -1,9 +1,6 @@
 import ContactInformation from "@/components/ContactInformation";
-import Flash from "@public/assets/icons/flash.svg";
-import Rocket from "@public/assets/icons/rocket.svg";
-import Sparkles from "@public/assets/icons/sparkles.svg";
-import Image from "next/image";
 import { forwardRef } from "react";
+import SvgIcon from "./SvgIcon";
 
 interface AboutBodyProps {}
 
@@ -19,9 +16,11 @@ const AboutBody = forwardRef<HTMLDivElement, AboutBodyProps>(
           A Front-end Engineer crafting cutting-edge, responsive, and
           user-centric web applications leveraging the latest technologies.{" "}
           <span className="inline-flex items-baseline">
-            <Image
-              src={Rocket}
-              alt="Rocket Blasting Off SVG Vector Icon"
+            <SvgIcon
+              icon="rocket"
+              viewBox="0 0 72 72"
+              name="Rocket Blasting Off SVG Vector Icon"
+              attributeName="Rocket Blasting Off SVG Vector Icon"
               className="self-center w-8 h-8 mx-1"
             />
           </span>{" "}
@@ -29,9 +28,11 @@ const AboutBody = forwardRef<HTMLDivElement, AboutBodyProps>(
           seamlessly integrates goals and requirements into a sophisticated,
           efficient, and resilient design.{" "}
           <span className="inline-flex items-baseline">
-            <Image
-              src={Sparkles}
-              alt="Sparkles SVG Vector Icon"
+            <SvgIcon
+              icon="sparkles"
+              viewBox="0 0 72 72"
+              name="Sparkles SVG Vector Icon"
+              attributeName="Sparkles SVG Vector Icon"
               className="self-center w-8 h-8 mx-1"
             />
           </span>{" "}
@@ -42,9 +43,11 @@ const AboutBody = forwardRef<HTMLDivElement, AboutBodyProps>(
           various browsers, navigating design constraints on the web, and
           creating responsive user interfaces.{" "}
           <span className="inline-flex items-baseline">
-            <Image
-              src={Flash}
-              alt="Lighting Flash SVG Vector Icon"
+            <SvgIcon
+              icon="flash"
+              viewBox="0 0 72 72"
+              name="Lighting Flash SVG Vector Icon"
+              attributeName="Lighting Flash SVG Vector Icon"
               className="self-center w-8 h-8 mx-1"
             />
           </span>{" "}
