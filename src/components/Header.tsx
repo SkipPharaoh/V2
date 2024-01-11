@@ -140,12 +140,12 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>(({ ...props }, ref) => {
           className="group transition-all duration-500 ease-in order-3 text-lg flex flex-col space-y-[0.2rem]  cursor-pointer items-center font-semibold md:hidden"
         >
           <div
-            className={` ${
+            className={`${
               open && "rotate-45 translate-y-[5px] "
             } relative rounded-xl origin-center transition-all duration-300 ease-in w-4 h-[0.1125rem] dark:bg-white/70 dark:text-white/70 fill-black text-black bg-black group-hover:bg-red-500 dark:group-hover:bg-blue-500`}
           ></div>
           <div
-            className={` ${
+            className={`${
               open && "opacity-0 translate-x-20"
             } relative rounded-xl origin-center transition-all duration-500 ease-in-out w-4 h-[0.1rem] dark:bg-white/70 dark:text-white/70 fill-black text-black bg-black group-hover:bg-red-500 dark:group-hover:bg-blue-500`}
           ></div>
@@ -156,7 +156,7 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>(({ ...props }, ref) => {
           ></div>
         </div>
         <ul
-          className={` rounded-3xl md:rounded-none dark:bg-[#353535] bg-white  py-4 md:py-0 md:bg-inherit font-semibold order-4 md:flex md:items-center md:pb-0 pb-8 absolute md:static bg-light-blue md:bg-none md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 lg:transition-none transition-all duration-500 ease-in ${
+          className={`rounded-3xl md:rounded-none dark:bg-[#353535] bg-white  py-4 md:py-0 md:bg-inherit font-semibold order-4 md:flex md:items-center md:pb-0 pb-8 absolute md:static bg-light-blue md:bg-none md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 lg:transition-none transition-all duration-500 ease-in ${
             open ? "top-[3.5rem]" : "top-[-490px]"
           }`}
         >
