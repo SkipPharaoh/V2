@@ -10,7 +10,6 @@ interface SvgIconProps extends SVGProps<SVGSVGElement> {
 
 const SvgIcon = forwardRef<SVGSVGElement, SvgIconProps>(
   ({ icon, ...props }, ref) => {
-    console.log("Icon prop:", icon);
     const iconPath: string =
       (iconPaths as Record<string, string>)[icon] ||
       (encodedPNGPaths as Record<string, string>)[icon];

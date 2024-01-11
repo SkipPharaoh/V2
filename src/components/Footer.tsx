@@ -17,6 +17,11 @@ const Footer = forwardRef<HTMLDivElement, FooterProps>(({ ...props }, ref) => {
   const handleMouseOut = () => {
     setIsHovering(false);
   };
+
+  /* *
+   * TODO: Remove useEffect and isolate getData() in a server action. Link to server action in Next.js doc below:
+   * https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations
+   */
   useEffect(() => {
     const getData = async () => {
       const data = await fetch(
