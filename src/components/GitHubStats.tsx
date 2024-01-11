@@ -14,7 +14,6 @@ export async function getGitHubData() {
 const GitHubStats = async () => {
   const { star, forks } = await getGitHubData();
 
-  console.log({ star, forks });
   return (
     <div className="flex space-x-4 dark:text-white text-black">
       <div className="flex dark:group-hover:text-blue-400 group-hover:text-red-500  space-x-1 items-center ">
