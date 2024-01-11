@@ -7,11 +7,6 @@ import InteractiveFooterText from "./InteractiveFooterText";
 interface FooterProps {}
 
 const Footer = forwardRef<HTMLDivElement, FooterProps>(({ ...props }, ref) => {
-  /* *
-   * TODO: Remove useEffect and isolate getData() in a server action. Link to server action in Next.js doc below:
-   * https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations
-   */
-
   return (
     <div
       ref={ref}
