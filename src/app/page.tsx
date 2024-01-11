@@ -3,6 +3,11 @@ import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
 import HomeHeader from "@/components/HomeHeader";
 
+/**
+ * TODO: Add CVA to entire application for cleaner, readable code. Link below:
+ * https://cva.style/docs
+ */
+
 export default function HomePage() {
   return (
     <div className="lg:min-h-screen px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 mx-auto max-w-[75rem]">
