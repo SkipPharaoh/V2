@@ -25,7 +25,8 @@ const TechStack = forwardRef<HTMLDivElement, TechStackProps>(
               <TechCard
                 id={tech.id}
                 alt={tech.title}
-                main={tech.main}
+                icon={tech.icon}
+                viewBox={tech.viewbox}
                 key={key}
                 changeId={changeId}
               />

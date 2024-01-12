@@ -1,17 +1,18 @@
 "use client";
 
-import Image from "next/image";
 import { forwardRef } from "react";
+import SvgIcon, { IconType } from "./SvgIcon";
 
 interface TechCardProps {
   id: number;
-  main: string;
   alt: string;
   changeId: (id: number) => void;
+  icon: IconType | string;
+  viewBox: string;
 }
 
 const TechCard = forwardRef<HTMLDivElement, TechCardProps>(
-  ({ id, main, alt, changeId, ...props }, ref) => {
+  ({ id, alt, changeId, icon, viewBox, ...props }, ref) => {
     return (
       <div
         ref={ref}
@@ -22,15 +23,14 @@ const TechCard = forwardRef<HTMLDivElement, TechCardProps>(
           window.scrollTo(0, 0);
         }}
       >
-        <div className="h-full w-full p-2 md:p-3 lg:p-4 relative">
-          <Image
-            src={main}
-            fill
-            className="select-none group-hover:scale-[1.1] hover:cursor-pointer transition-all duration-700 object-contain p-2 md:p-3 rounded-lg md:rounded-xl lg:rounded-2xl"
-            alt={alt}
-            sizes="(max-width: 768px) 100vw,
-          (max-width: 1200px) 50vw,
-          33vw"
+        <div className="h-full w-full p-2 md:p-3 lg:p-4 relative hover:cursor-pointer rounded-lg md:rounded-xl lg:rounded-2xl">
+          <SvgIcon
+            icon={icon as IconType}
+            fill="currentColor"
+            viewBox={viewBox}
+            className="select-none group-hover:scale-[1.1] transition-all duration-700 object-contain"
+            name={alt}
+            attributeName={alt}
           />
         </div>
       </div>
