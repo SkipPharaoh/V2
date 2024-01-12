@@ -2,7 +2,7 @@ import React, { SVGProps, forwardRef } from "react";
 import { iconPaths } from "../../public/IconPaths";
 import { encodedPNGPaths } from "../../public/EncodedPNGPaths";
 
-type IconType = keyof typeof iconPaths | keyof typeof encodedPNGPaths;
+export type IconType = keyof typeof iconPaths | keyof typeof encodedPNGPaths;
 interface SvgIconProps extends SVGProps<SVGSVGElement> {
   // Add additional props specific to your SVG component
   icon: IconType;
