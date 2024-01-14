@@ -1,8 +1,9 @@
 "use client";
 
+import useAlertVisible from "@/hooks/useAlertVisible";
 import Image from "next/image";
 import Link from "next/link";
-import { forwardRef, useState } from "react";
+import { forwardRef } from "react";
 import { projectsData } from "../../public/Projects";
 import ProjectCardAlertModal from "./ProjectCardAlertModal";
 
@@ -10,11 +11,8 @@ interface ProjectCardProps {}
 
 const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
   ({ ...props }, ref) => {
-    const [isAlertVisible, setAlertVisible] = useState(false);
-
-    const handleAlertClose = () => {
-      setAlertVisible(false);
-    };
+    const { isAlertVisible, setAlertVisible, handleAlertClose } =
+      useAlertVisible();
 
     return (
       <div
