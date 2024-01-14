@@ -1,11 +1,14 @@
-import Link from "next/link";
+import EmptyState from "@/components/EmptyState";
 
 export default function NotFound() {
+  const emptyStateText = "Could not find requested page";
+  const emptyStateButtonText = "Return Home";
+
   return (
-    <div>
-      <h2>Not Found</h2>
-      <p>Could not find requested resource</p>
-      <Link href="/">Return Home</Link>
-    </div>
+    <EmptyState
+      type="empty"
+      text={emptyStateText}
+      buttonText={emptyStateButtonText}
+    />
   );
 }
