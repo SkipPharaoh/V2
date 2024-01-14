@@ -1,6 +1,6 @@
-import React, { SVGProps, forwardRef } from "react";
-import { iconPaths } from "../../public/IconPaths";
+import { SVGProps, forwardRef } from "react";
 import { encodedPNGPaths } from "../../public/EncodedPNGPaths";
+import { iconPaths } from "../../public/IconPaths";
 
 export type IconType = keyof typeof iconPaths | keyof typeof encodedPNGPaths;
 interface SvgIconProps extends SVGProps<SVGSVGElement> {

@@ -1,4 +1,3 @@
-// AlertModal.tsx
 import React, { forwardRef, ReactNode } from "react";
 import Modal from "./Modal";
 

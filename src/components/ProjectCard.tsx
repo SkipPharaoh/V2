@@ -3,7 +3,7 @@
 import useAlertVisible from "@/hooks/useAlertVisible";
 import Image from "next/image";
 import Link from "next/link";
-import { forwardRef } from "react";
+import { Suspense, forwardRef } from "react";
 import { projectsData } from "../../public/Projects";
 import ProjectCardAlertModal from "./ProjectCardAlertModal";
 
@@ -35,13 +35,21 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
                   }
                 }}
               >
-                <Image
-                  loading="lazy"
-                  src={project.image}
-                  alt={project.title}
-                  width="200"
-                  className="rounded-md drop-shadow-2xl hover:scale-110"
-                />
+                <Suspense
+                  fallback={
+                    <div className="animate-ping rounded-md bg-gray-500/70 w-full h-full drop-shadow-2xl">
+                      ...loading
+                    </div>
+                  }
+                >
+                  <Image
+                    loading="lazy"
+                    src={project.image}
+                    alt={project.title}
+                    width="200"
+                    className="rounded-md drop-shadow-2xl hover:scale-110"
+                  />
+                </Suspense>
               </Link>
               <div className="flex flex-col items-center">
                 <h1 className="font-semibold text-[1.5rem] mt-3 text-gray-700 dark:text-white">
