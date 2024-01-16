@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import type { Metadata } from "next";
+import NavBar from "@/components/NavBar";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -59,7 +59,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <main className="land relative z-10">
-            <Header />
+            <NavBar />
             {children}
             <Footer />
           </main>
