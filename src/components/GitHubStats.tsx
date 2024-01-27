@@ -1,15 +1,6 @@
+import getGitHubData from "@/data-fetch/getGitHubData";
 import { FaRegStar } from "react-icons/fa";
 import { FiGitBranch } from "react-icons/fi";
-
-export async function getGitHubData() {
-  const response = await fetch("https://api.github.com/repos/SkipPharaoh/V2");
-  const data = await response.json();
-
-  return {
-    star: data.stargazers_count as number,
-    forks: data.forks_count as number,
-  };
-}
 
 const GitHubStats = async () => {
   const { star, forks } = await getGitHubData();
