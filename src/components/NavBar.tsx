@@ -1,6 +1,8 @@
 "use client";
 
 import useDarkMode from "@/hooks/useDarkMode";
+import SkipDesign from "@public/assets/images/NameDesign.png";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -95,15 +97,11 @@ const NavBar = forwardRef<HTMLDivElement, NavBarProps>(({ ...props }, ref) => {
       <div className="flex justify-between md:space-x-10 lg:space-x-12 xl:space-x-16 md:flex items-center place-items-center md:justify-center py-3 md:px-10 px-8">
         <div className="select-none order-2 md:order-1 cursor-pointer flex items-center text-gray-800">
           <Link href={"/"} className="">
-            {/* TODO: Render an actual image of my name (Skip or Caniggia) */}
-            {/* {currentTheme === "dark" ? (
-              <Image src={pranjal_header_white} alt="header" width="100" />
-            ) : (
-              <Image src={pranjal_header_black} alt="header" width="100" />
-            )} */}
-            <h1 className="text-black dark:text-white duration-300 ease-in hover:text-red-500 dark:hover:text-blue-500">
-              Caniggia
-            </h1>
+            <Image
+              src={SkipDesign}
+              alt="Image of the name Skip"
+              height={"50"}
+            />
           </Link>
         </div>
 
