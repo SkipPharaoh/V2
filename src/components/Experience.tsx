@@ -2,10 +2,8 @@ import { forwardRef } from "react";
 import ExperienceActions from "./ExperienceActions";
 import ExperienceCard from "./ExperienceCard";
 import YearsOfExperienceCard from "./YearsOfExperienceCard";
-
-// TODO: Add appropriate PNG image to replace both Mock images below
-import NextMockIcon from "/public/assets/icons/next.svg";
-import VercelMockIcon from "/public/assets/icons/vercel.svg";
+import WebDevCode from "/public/assets/images/lowlevelcode.png";
+import ProblemSolver from "/public/assets/images/problemsolver.png";
 
 interface ContactProps {}
 
@@ -27,14 +25,14 @@ const Experience = forwardRef<HTMLDivElement, ContactProps>(
           <div className="absolute left-[0%] md:left-[10%] lg:left-[50%] w-[3px] h-full top-8 md:top-4 bg-gradient-to-b from-teal-400 via-purple-400 to-red-400 border-[#ffffff80] border rounded lg:hidden"></div>
 
           <ExperienceCard
-            image={NextMockIcon}
+            image={WebDevCode}
             description={webDescription}
             variant={"web"}
             title={"Web Dev"}
             skills={["Next.js", "TypeScript", "Tailwind"]}
           />
           <ExperienceCard
-            image={VercelMockIcon}
+            image={ProblemSolver}
             description={solverDescription}
             variant={"solver"}
             title={"Problem Solver"}
