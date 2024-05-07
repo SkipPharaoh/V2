@@ -3,7 +3,7 @@ import SvgIcon from "./SvgIcon";
 interface YearsOfExperienceCardProps {}
 
 const YearsOfExperienceCard = ({ ...props }: YearsOfExperienceCardProps) => {
-  const yearsOfExperience = new Date().getUTCFullYear() - 2021;
+  const yearsOfExperience = new Date().getUTCFullYear() - 2022;
 
   return (
     <>

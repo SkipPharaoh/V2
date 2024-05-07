@@ -21,8 +21,8 @@ const HomeHeader = forwardRef<HTMLDivElement, HomeHeaderProps>(
           <p className="font-light sm:leading-6 md:leading-6 lg:leading-8">
             A front-end engineer based in{" "}
             <span className="font-medium select-none animate-text bg-gradient-to-br from-red-400 dark:from-red-400 via-[#fff4f4] dark:via-[#fff] dark:text-black  text-border2 to-blue-400 dark:to-blue-400 rounded px-2 py-[0.05rem]">
-              Florida, US
-            </span>
+              New York, US
+            </span>{" "}
             who develops modern, reactive, and user-friendly web applications
             using the latest technologies currently. I believe a perfect blend
             of UI architecture is one, where the goals and needs are accounted
