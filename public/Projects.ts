@@ -35,7 +35,7 @@ export const projectsData = [
     icon: "evo",
     title: "Noir Tech Tribe",
     description: "Tech blog made using NextJS and Tailwind CSS",
-    link: "https://www.noirtechtribe.com/",
+    link: "https://noir-tech.vercel.app/",
     target: "_blank",
     viewbox: "0 0 72 72",
   },
