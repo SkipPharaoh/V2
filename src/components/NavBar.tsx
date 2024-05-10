@@ -96,7 +96,7 @@ const NavBar = forwardRef<HTMLDivElement, NavBarProps>(({ ...props }, ref) => {
     >
       <div className="flex justify-between md:space-x-10 lg:space-x-12 xl:space-x-16 md:flex items-center place-items-center md:justify-center py-3 md:px-10 px-8">
         <div className="select-none order-2 md:order-1 cursor-pointer flex items-center text-gray-800">
-          <Link href={"/"} className="">
+          <Link href={"/"} onClick={() => setOpen(false)} className="">
             <Image
               src={SkipDesign}
               alt="Image of the name Skip"
