@@ -9,7 +9,7 @@ interface AboutHeaderInFo {
   altName: string;
 }
 
-const AboutHeaderInfo: AboutHeaderInFo[] = [
+const aboutHeaderInfo: AboutHeaderInFo[] = [
   {
     role: "Developer",
     icon: "laptop",
@@ -64,7 +64,7 @@ const AboutHeader = forwardRef<HTMLDivElement, AboutHeaderProps>(
             </span>{" "}
           </h3>
           <p className="text-gray-400 font-deca font-normal text-xs sm:text-sm md:text-md lg:text-lg ">
-            {AboutHeaderInfo.map((info, id) => {
+            {aboutHeaderInfo.map((info, id) => {
               return (
                 <Fragment key={info.role}>
                   {id !== 0 && ` || `}
