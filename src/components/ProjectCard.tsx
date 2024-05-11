@@ -47,6 +47,7 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
                     src={project.image}
                     alt={project.title}
                     width="200"
+                    // TODO: Need to add a background color & the rest of the border color
                     className="rounded-md drop-shadow-2xl hover:scale-110 border-l-teal-400 border-2"
                   />
                 </Suspense>
