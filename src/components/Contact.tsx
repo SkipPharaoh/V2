@@ -7,6 +7,30 @@ import ChatBubble from "../../public/assets/icons/chat-bubble.svg";
 
 interface ContactProps {}
 
+interface ContactInfo {
+  href: string;
+  icon: typeof FaTiktok | typeof TfiLinkedin | typeof MdOutlineAlternateEmail;
+  platform: "TikTok" | "LinkedIn" | "E-mail";
+}
+
+const contactInfo: ContactInfo[] = [
+  {
+    href: "https://www.tiktok.com/@skip_pharaoh",
+    icon: FaTiktok,
+    platform: "TikTok",
+  },
+  {
+    href: "https://linkedin.com/in/skippharaoh",
+    icon: TfiLinkedin,
+    platform: "LinkedIn",
+  },
+  {
+    href: "mailto:caniggiathompson@gmail.com",
+    icon: MdOutlineAlternateEmail,
+    platform: "E-mail",
+  },
+];
+
 const Contact = forwardRef<HTMLDivElement, ContactProps>(
   ({ ...props }, ref) => {
     return (
@@ -25,38 +49,24 @@ const Contact = forwardRef<HTMLDivElement, ContactProps>(
             the links below.
           </p>
           <div className="grid grid-cols-3 text-[0.7rem] md:text-[0.85rem] lg:text-base gap-2 md:gap-3 lg:gap-4">
-            <a
-              href="https://www.tiktok.com/@skip_pharaoh"
-              target="_blank"
-              className=" flex align-middle items-center font-jak font-bold space-x-1 w-max "
-            >
-              <FaTiktok className="text-[#0077B5] dark:text-[#f87171] h-3 w-3 md:h-4 md:w-4 " />
-              <h5 className="text-transparent text-[#0077B5] dark:text-[#f87171]">
-                TikTok
-              </h5>
-            </a>
-            <a
-              href="https://linkedin.com/in/skippharaoh"
-              target="_blank"
-              rel="noopener noreferrer"
-              className=" flex align-middle items-center font-jak font-bold space-x-1 w-max "
-            >
-              <TfiLinkedin className="text-[#0077B5] dark:text-[#f87171] h-3 w-3 md:h-4 md:w-4" />
-              <h5 className="text-transparent text-[#0077B5] dark:text-[#f87171]">
-                LinkedIn
-              </h5>
-            </a>
-            <a
-              href="mailto:caniggiathompson@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className=" flex align-middle items-center font-jak font-bold space-x-1 w-max "
-            >
-              <MdOutlineAlternateEmail className="text-[#3B82F6] dark:text-[#f87171] h-3 w-3 md:h-4 md:w-4 " />
-              <h5 className="text-transparent text-[#3B82F6] dark:text-[#f87171]">
-                E-mail
-              </h5>
-            </a>
+            {contactInfo.map((info, id) => {
+              return (
+                <a
+                  key={info.platform}
+                  href={info.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex align-middle items-center font-jak font-bold space-x-1 w-max"
+                >
+                  {
+                    <info.icon className="text-[#0077B5] dark:text-[#f87171] h-3 w-3 md:h-4 md:w-4" />
+                  }
+                  <h5 className="text-transparent text-[#0077B5] dark:text-[#f87171]">
+                    {info.platform}
+                  </h5>
+                </a>
+              );
+            })}
           </div>
         </div>
         <div className="order-1 lg:order-2 absolute -rotate-[15deg] lg:rotate-0 lg:flex top-6 right-4 md:top-10 md:right-12 lg:basis-[40%]">

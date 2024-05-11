@@ -5,15 +5,37 @@ import YearsOfExperienceCard from "./YearsOfExperienceCard";
 import WebDevCode from "/public/assets/images/lowlevelcode.png";
 import ProblemSolver from "/public/assets/images/problemsolver.png";
 
-interface ContactProps {}
+interface ExperienceProps {}
 
-const Experience = forwardRef<HTMLDivElement, ContactProps>(
+interface ExperienceInfo {
+  image: typeof WebDevCode | typeof ProblemSolver;
+  description: string;
+  variant: "web" | "solver";
+  title: "Web Dev" | "Problem Solver";
+  skills: [string, string?, string?];
+}
+
+const experienceInfo: ExperienceInfo[] = [
+  {
+    image: WebDevCode,
+    description:
+      "Specialized in crafting visually stunning and user-friendly websites, leveraging my proficiency in ReactJS-centric tools. I infuse each project with a touch of personality and creativity.",
+    variant: "web",
+    title: "Web Dev",
+    skills: ["Next.js", "TypeScript", "Tailwind"],
+  },
+  {
+    image: ProblemSolver,
+    description:
+      "Meticulously unraveling complex challenges with my logic-drivenapproach. I transform problems into elegant solutions, crafting code that stands the test of real-world scenarios.",
+    variant: "solver",
+    title: "Problem Solver",
+    skills: ["Strategic", "Logical", "Resourceful"],
+  },
+];
+
+const Experience = forwardRef<HTMLDivElement, ExperienceProps>(
   ({ ...props }, ref) => {
-    const webDescription =
-      "Specialized in crafting visually stunning and user-friendly websites, leveraging my proficiency in ReactJS-centric tools. I infuse each project with a touch of personality and creativity.";
-    const solverDescription =
-      "Meticulously unraveling complex challenges with my logic-drivenapproach. I transform problems into elegant solutions, crafting code that stands the test of real-world scenarios.";
-
     return (
       <div
         ref={ref}
@@ -22,22 +44,18 @@ const Experience = forwardRef<HTMLDivElement, ContactProps>(
       >
         <YearsOfExperienceCard />
         <div className="flex flex-col relative space-y-16 md:space-y-10 lg:space-y-8 items-center">
-          <div className="absolute left-[0%] md:left-[10%] lg:left-[50%] w-[3px] h-full top-8 md:top-4 bg-gradient-to-b from-teal-400 via-purple-400 to-red-400 border-[#ffffff80] border rounded lg:hidden"></div>
-
-          <ExperienceCard
-            image={WebDevCode}
-            description={webDescription}
-            variant={"web"}
-            title={"Web Dev"}
-            skills={["Next.js", "TypeScript", "Tailwind"]}
-          />
-          <ExperienceCard
-            image={ProblemSolver}
-            description={solverDescription}
-            variant={"solver"}
-            title={"Problem Solver"}
-            skills={["Strategic", "Logical", "Resourceful"]}
-          />
+          {experienceInfo.map((info, id) => {
+            return (
+              <ExperienceCard
+                key={info.title}
+                image={info.image}
+                description={info.description}
+                variant={info.variant}
+                title={info.title}
+                skills={info.skills}
+              ></ExperienceCard>
+            );
+          })}
         </div>
         <ExperienceActions />
       </div>
