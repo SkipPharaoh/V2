@@ -4,6 +4,8 @@ import React, { forwardRef } from "react";
 
 interface ContactInformationProps {}
 
+// TODO: Remove the name & make the platform name the links to the appropriate pages
+
 const ContactInformation = forwardRef<HTMLDivElement, ContactInformationProps>(
   ({ ...props }, ref) => {
     return (

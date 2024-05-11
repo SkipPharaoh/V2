@@ -118,8 +118,8 @@
     position: absolute;
     inset: 0px;
     z-index: -100;
-    background-image: url("/assets/images/header-gradient.svg"),
-      url("/assets/images/footer-gradient.svg");
+    background-image: url("/assets/icons/header-gradient.svg"),
+      url("/assets/icons/footer-gradient.svg");
     background-repeat: no-repeat;
     background-position: center top, center bottom;
     background-size: 1400px;

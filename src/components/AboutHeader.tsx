@@ -24,7 +24,7 @@ const AboutHeader = forwardRef<HTMLDivElement, AboutHeaderProps>(
           />
         </div>
         <div className="text-center mx-auto mt-8 z-20">
-          <h3 className="mx-auto  font-bold text-lg lg:text-xl xl:text-2xl">
+          <h3 className="mx-auto font-bold text-lg lg:text-xl xl:text-2xl">
             Caniggia &quot;Skip&quot; Thompson{" "}
             <span className="inline-flex items-baseline">
               <SvgIcon
@@ -37,6 +37,7 @@ const AboutHeader = forwardRef<HTMLDivElement, AboutHeaderProps>(
             </span>{" "}
           </h3>
           <p className="text-gray-400 font-deca font-normal text-xs sm:text-sm md:text-md lg:text-lg ">
+            {/* TODO: Refactor code below to remove Redundancy (DRY) */}
             Developer{" "}
             <span className="inline-flex items-baseline">
               <SvgIcon

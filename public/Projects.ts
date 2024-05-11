@@ -1,17 +1,15 @@
-import Aizen from "../public/assets/icons/aizen.svg";
-import Kamui from "../public/assets/icons/kamui.svg";
-import Pokedex from "../public/assets/icons/pokedex.svg";
-import Portfolio from "../public/assets/icons/portfolio.svg";
-import Evo from "../public/assets/icons/evo.png";
-import Nike from "../public/assets/icons/nike.png";
-import Nft from "../public/assets/icons/nft.png";
-
-// TODO: Update images to match the appropriate project
+import V1 from "@public/assets/images/v1.png";
+import HomeAvatar from "@public/assets/images/Home-Avatar.png";
+import AnimatedBlkWoman from "@public/assets/images/animated-black-woman.png";
+import Blackjack from "@public/assets/images/blackjack.png";
+import CPULaptop from "@public/assets/images/cpu-laptop.png";
+import PokeBall from "@public/assets/images/pokeballs.png";
+import SystemDesign from "@public/assets/images/system-design.png";
 
 export const projectsData = [
   {
     id: 1,
-    image: Aizen,
+    image: AnimatedBlkWoman,
     icon: "aizen",
     title: "Sonya's Portfolio",
     description: "Portfolio built with astro",
@@ -21,7 +19,7 @@ export const projectsData = [
   },
   {
     id: 2,
-    image: Kamui,
+    image: SystemDesign,
     icon: "kamui",
     title: "Noir Tribe Docs",
     description: "Design system for reusable components",
@@ -31,7 +29,7 @@ export const projectsData = [
   },
   {
     id: 3,
-    image: Evo,
+    image: CPULaptop,
     icon: "evo",
     title: "Noir Tech Tribe",
     description: "Tech blog made using NextJS and Tailwind CSS",
@@ -41,7 +39,7 @@ export const projectsData = [
   },
   {
     id: 4,
-    image: Pokedex,
+    image: PokeBall,
     icon: "pokedex",
     title: "Pokedex",
     description: "Gotta Catch'em All. Explore your Pokemon",
@@ -51,7 +49,7 @@ export const projectsData = [
   },
   {
     id: 5,
-    image: Nike,
+    image: V1,
     icon: "nike",
     title: "Portfolio v1",
     description: "1st iteration of this portfolio",
@@ -61,7 +59,7 @@ export const projectsData = [
   },
   {
     id: 6,
-    image: Nft,
+    image: Blackjack,
     icon: "nft",
     title: "Blackjack",
     description: "Popular casino card game",
@@ -71,7 +69,7 @@ export const projectsData = [
   },
   {
     id: 7,
-    image: Portfolio,
+    image: HomeAvatar,
     icon: "portfolio",
     title: "Portfolio v2",
     description: "Portfolio made using NextJS and Tailwind CSS",
