@@ -1,7 +1,34 @@
-import { forwardRef } from "react";
-import SvgIcon from "./SvgIcon";
+import { forwardRef, Fragment } from "react";
+import SvgIcon, { IconType } from "./SvgIcon";
 
 interface AboutHeaderProps {}
+interface AboutHeaderInFo {
+  role: string;
+  icon: IconType;
+  viewBox: string;
+  altName: string;
+}
+
+const AboutHeaderInfo: AboutHeaderInFo[] = [
+  {
+    role: "Developer",
+    icon: "laptop",
+    viewBox: "0 0 504.8 504.8",
+    altName: "Laptop SVG Vector Icon",
+  },
+  {
+    role: "Investor",
+    icon: "growth-investment",
+    viewBox: "0 0 480 480",
+    altName: "Growth Investment SVG Vector Icon",
+  },
+  {
+    role: "Thinker",
+    icon: "thinking",
+    viewBox: "0 0 500 500",
+    altName: "Avatar Thinking SVG Vector Icon",
+  },
+];
 
 const AboutHeader = forwardRef<HTMLDivElement, AboutHeaderProps>(
   ({ ...props }, ref) => {
@@ -37,37 +64,23 @@ const AboutHeader = forwardRef<HTMLDivElement, AboutHeaderProps>(
             </span>{" "}
           </h3>
           <p className="text-gray-400 font-deca font-normal text-xs sm:text-sm md:text-md lg:text-lg ">
-            {/* TODO: Refactor code below to remove Redundancy (DRY) */}
-            Developer{" "}
-            <span className="inline-flex items-baseline">
-              <SvgIcon
-                icon="laptop"
-                viewBox="0 0 504.8 504.8"
-                name="Laptop SVG Vector Icon"
-                attributeName="Laptop SVG Vector Icon"
-                className="self-center w-6 h-6 mx-1"
-              />
-            </span>{" "}
-            &#47;&#47; Investor{" "}
-            <span className="inline-flex items-baseline">
-              <SvgIcon
-                icon="growth-investment"
-                viewBox="0 0 480 480"
-                name="Growth Investment SVG Vector Icon"
-                attributeName="Growth Investment SVG Vector Icon"
-                className="self-center w-6 h-6 mx-1"
-              />
-            </span>{" "}
-            &#47;&#47; Thinker{" "}
-            <span className="inline-flex items-baseline">
-              <SvgIcon
-                icon="thinking"
-                viewBox="0 0 500 500"
-                name="Avatar Thinking SVG Vector Icon"
-                attributeName="Avatar Thinking SVG Vector Icon"
-                className="self-center w-6 h-6 mx-1"
-              />
-            </span>{" "}
+            {AboutHeaderInfo.map((info, id) => {
+              return (
+                <Fragment key={info.role}>
+                  {id !== 0 && ` || `}
+                  {info.role}{" "}
+                  <span className="inline-flex items-baseline">
+                    <SvgIcon
+                      icon={info.icon}
+                      viewBox={info.viewBox}
+                      name={info.altName}
+                      attributeName={info.altName}
+                      className="self-center w-6 h-6 mx-1"
+                    />
+                  </span>{" "}
+                </Fragment>
+              );
+            })}
           </p>
         </div>
       </div>
