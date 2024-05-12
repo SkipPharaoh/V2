@@ -48,7 +48,7 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
                     alt={project.title}
                     width="200"
                     // TODO: Need to add a background color & the rest of the border color
-                    className="rounded-md drop-shadow-2xl hover:scale-110 border-l-teal-400 border-2"
+                    className="rounded-xl bg-gradient-to-b from-[#C1BED0] dark:from-[#81559B] to-transparent drop-shadow-2xl hover:scale-110 border-x-fuchsia-600 border-y-[#FF312E] dark:border-white border-2"
                   />
                 </Suspense>
               </Link>

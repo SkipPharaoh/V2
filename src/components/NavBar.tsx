@@ -19,11 +19,11 @@ import NavLinks from "./NavLinks";
 interface NavBarProps {}
 
 const NavBar = forwardRef<HTMLDivElement, NavBarProps>(({ ...props }, ref) => {
-  const { setTheme, currentTheme } = useDarkMode();
   const pathName = usePathname();
+  const [isOpen, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const { setTheme, currentTheme } = useDarkMode();
   const [isScrolled, setIsScrolled] = useState(false);
-  let [isOpen, setOpen] = useState(false);
   const touchRef = useRef<HTMLDivElement | null>(null);
 
   const clickHandler = (link: string) => {
@@ -45,10 +45,10 @@ const NavBar = forwardRef<HTMLDivElement, NavBarProps>(({ ...props }, ref) => {
         }
       }
       // Bind the event listener
-      document.addEventListener("mousedown", handleClickOutside);
+      window.addEventListener("mousedown", handleClickOutside);
       return () => {
         // Unbind the event listener on clean up
-        document.removeEventListener("mousedown", handleClickOutside);
+        window.removeEventListener("mousedown", handleClickOutside);
       };
     }, [ref]);
   };
