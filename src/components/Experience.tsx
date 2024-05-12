@@ -27,7 +27,7 @@ const experienceInfo: ExperienceInfo[] = [
   {
     image: ProblemSolver,
     description:
-      "Meticulously unraveling complex challenges with my logic-drivenapproach. I transform problems into elegant solutions, crafting code that stands the test of real-world scenarios.",
+      "Meticulously unraveling complex challenges with my logic-driven approach. I transform problems into elegant solutions, crafting code that stands the test of real-world scenarios.",
     variant: "solver",
     title: "Problem Solver",
     skills: ["Strategic", "Logical", "Resourceful"],
