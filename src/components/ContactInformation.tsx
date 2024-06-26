@@ -18,10 +18,12 @@ const ContactInformation = forwardRef<HTMLDivElement, ContactInformationProps>(
           Feel free to reach out to me via{" "}
           <a
             onClick={() =>
-              navigator.clipboard.writeText("caniggiathompson@gmail.com")
+              navigator.clipboard.writeText(
+                "caniggiathompson+portfolio@gmail.com"
+              )
             }
             className=" underline underline-offset-4 decoration-2 decoration-red-400 group select-all font-semibold dark:hover:text-red-400 hover:text-red-700 cursor-pointer select "
-            href="mailto:caniggiathompson@gmail.com"
+            href="mailto:caniggiathompson+portfolio@gmail.com"
           >
             <span className="text-red-700 font-bold">GMail</span>
           </a>{" "}

@@ -51,7 +51,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="back font-out mx-auto bg-[#fffdfd] dark:bg-[#242424] overflow-x-hidden lg:transform-gpu">
+      <body className="back font-out mx-auto bg-[#fffdfd] dark:bg-black overflow-x-hidden lg:transform-gpu">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

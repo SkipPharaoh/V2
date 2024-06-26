@@ -13,7 +13,7 @@ const footerIcons = [
     icon: "github",
   },
   {
-    href: "mailto:caniggiathompson@gmail.com",
+    href: "mailto:caniggiathompson+portfolio@gmail.com",
     icon: "email",
   },
 ];

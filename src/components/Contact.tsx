@@ -25,7 +25,7 @@ const contactInfo: ContactInfo[] = [
     platform: "LinkedIn",
   },
   {
-    href: "mailto:caniggiathompson@gmail.com",
+    href: "mailto:caniggiathompson+portfolio@gmail.com",
     icon: MdOutlineAlternateEmail,
     platform: "E-mail",
   },
