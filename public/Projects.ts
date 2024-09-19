@@ -13,7 +13,7 @@ export const projectsData = [
     icon: "aizen",
     title: "Sonya's Portfolio",
     description: "Portfolio built with astro",
-    link: "https://sonya-personal-website.vercel.app/",
+    link: "https://sonyalt.vercel.app/",
     target: "_blank",
     viewbox: "0 0 617 643",
   },
