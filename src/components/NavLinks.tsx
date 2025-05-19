@@ -11,12 +11,14 @@ interface NavLinksProps {
   clickHandler: (link: string) => void;
 }
 
+// TODO: Change the resume link to a page that has the job experience in timeline format with an option to view/download resume
 const NavLinks = ({ isOpen, pathName, clickHandler }: NavLinksProps) => {
   const Links: Link[] = [
     { name: "Work", link: "/work" },
     { name: "About", link: "/about" },
     { name: "Tech", link: "/tech" },
     { name: "Resume", link: "/Caniggia_Thompson_Resume.pdf" },
+    // { name: "Experience", link: "/experience" },
   ];
 
   const resumeStyle = "xl:text-[1.1rem] font-regular ";
