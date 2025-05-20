@@ -1,0 +1,81 @@
+import { Experience } from "@/components/InteractiveTimeline";
+
+export const experienceData: Experience[] = [
+  {
+    id: 1,
+    type: "Educational",
+    label: "Huntington University",
+    title: "B.S. & B.A",
+    startDate: "2014-08-01",
+    endDate: "2018-06-01",
+    duration: "4 years",
+    location: "Huntington, IN",
+    experienceType: "Full-time",
+    description: "Undergraduate program in Marketing and Philosophy.",
+  },
+  {
+    id: 2,
+    type: "Professional",
+    label: "BT's Plumbing & Heating",
+    title: "Data Entry Specialist",
+    startDate: "2019-02-01",
+    endDate: "2022-05-31",
+    duration: "3 years 4 months",
+    location: "New York City, NY",
+    experienceType: "Full-time",
+    description:
+      "• Optimized data management: Led transition to BigQuery, ensuring precision for 23 files in 3 databases.\n• Spearheaded file cabinet to cloud shift: Enhanced accessibility, minimized manual errors by 100% accuracy.\n• Collaborated for efficient data entry: Implemented innovative processes for higher accuracy.\n• Automated workflows with Python: Boosted operational efficiency, enabling streamlined queries.",
+  },
+  {
+    id: 3,
+    type: "Educational",
+    label: "General Assembly",
+    title: "SWE Immersive Bootcamp",
+    startDate: "2021-12-01",
+    endDate: "2022-03-01",
+    duration: "3 Months",
+    location: "Remote, USA",
+    experienceType: "Full-time",
+    description:
+      "Activities and societies: - Mastered an immersive 13-week Jr. Full Stack Developer Program. Gained practical project experience in version control and front-end technologies. Acquired proficiency in JavaScript, Object-Oriented programming (OOP), SQL/NoSQL, Python, Django and React Framework. Explored Agile methodologies, code reviews, and deployed a full stack application backed by Python and Django.",
+  },
+  {
+    id: 4,
+    type: "Professional",
+    label: "OfferUp",
+    title: "Software Development Engineer",
+    startDate: "2022-05-01",
+    endDate: "2023-05-31",
+    duration: "1 year 1 month",
+    location: "Remote, FL",
+    experienceType: "Full-time",
+    description:
+      "• Collaborated on the development of management systems which reduced bug fix times by 20%.\n• Assisted in the maintenance and improvement of company codebase, leading to a 15% increase in efficiency.\n• Refactored legacy code bases using modern development practices and tools, resulting in a 100% increase in app performance and user experience.",
+  },
+  {
+    id: 5,
+    type: "Professional",
+    label: "Farming Cents Reaping Dollars",
+    title: "Software Developer",
+    startDate: "2023-06-01",
+    endDate: "2025-01-31",
+    duration: "1 year 8 months",
+    location: "Remote, USA",
+    experienceType: "Freelancer",
+    description:
+      "• Design and develop responsive websites and portals for diverse clients, utilizing HTML5, CSS3, and JavaScript, ensuring compliance with accessibility standards.\n• Continuously learn and integrate the latest engineering practices and tools to improve code quality and performance, maintaining a proactive approach to problem-solving.\n• Successfully managed multiple projects simultaneously, demonstrating strong organizational skills and attention to detail.",
+  },
+  {
+    id: 6,
+    type: "Professional",
+    label: "Microsoft - LEAP",
+    title: "Software Engineer",
+    startDate: "2025-01-01",
+    endDate: "2025-05-09",
+    duration: "5 months",
+    location: "Remote, NY",
+    experienceType: "Apprenticeship",
+    description:
+      "• Developed and implemented comprehensive scenario tests for Virtual Disk Controller (VDC) and Virtual Hard Disk (Vhddisk) as part of the Cirrus project. These tests simulate a Windows cluster shared volume application, significantly increasing the test coverage for Windows CSV (Cluster Shared Volumes).\n• Enhanced the robustness and reliability of the platform by identifying and addressing potential issues before they could affect end-users.\n• Engaged in continuous learning and professional development through the Microsoft Leap program. Focused on building core technical skills and expanding knowledge in software engineering.",
+  },
+];

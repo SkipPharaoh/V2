@@ -49,7 +49,7 @@ export default function InteractiveTimeline({ experiences }: TimelineProps) {
   return (
     <div className="flex flex-col md:flex-row h-full w-9/12 max-w-4xl mt-auto items-start">
       {/* LEFT SIDEBAR */}
-      <div className="md:w-1/3 border-r border-gray-200 dark:border-gray-700 p-4">
+      <div className="md:w-1/3 p-4">
         {["Professional", "Educational"].map((section) => {
           const items = filteredByType(section as ExpType);
           const isOpen = openSection === section;
@@ -89,18 +89,26 @@ export default function InteractiveTimeline({ experiences }: TimelineProps) {
       </div>
 
       {/* RIGHT DETAIL PANEL */}
-      <div className="md:w-2/3 p-6 overflow-y-auto">
+      <div className="md:w-2/3 p-6 overflow-y-auto border-l border-l-fuchsia-600 dark:border-white">
         {selected ? (
           <div className="space-y-3">
-            <div className="text-sm text-gray-500">{selected.type}</div>
-            <h2 className="text-2xl font-bold">{selected.label}</h2>
-            <p className="text-lg font-medium">{selected.title}</p>
-            <div className="text-sm text-gray-600">
+            <div className="flex justify-between flex-row-reverse">
+              <div className="text-sm text-gray-500 dark:text-yellow-500">
+                {selected.type}
+              </div>
+              <h2 className="text-2xl font-bold">{selected.label}</h2>
+            </div>
+            <div className="flex justify-between">
+              <p className="text-lg font-medium">{selected.title}</p>
+              <div className="text-sm text-gray-500 dark:text-yellow-500">
+                {selected.experienceType}
+              </div>
+            </div>
+            <div className="text-sm text-gray-600 dark:text-yellow-500">
               {selected.startDate} – {selected.endDate} · {selected.duration}
             </div>
-            <div className="text-sm text-gray-600">{selected.location}</div>
-            <div className="text-sm text-gray-600">
-              {selected.experienceType}
+            <div className="text-sm text-gray-600 dark:text-yellow-500">
+              {selected.location}
             </div>
             <p className="text-base mt-2 whitespace-pre-line">
               {selected.description}
