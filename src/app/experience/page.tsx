@@ -17,6 +17,7 @@ const expCategoriesData: CategoryCardInfo[] = [
   },
 ];
 
+// TODO: Fix responsive design on screens smaller than medium
 export default function ExperiencePage() {
   const resumeLink = (
     <Link

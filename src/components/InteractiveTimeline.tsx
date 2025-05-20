@@ -89,7 +89,7 @@ export default function InteractiveTimeline({ experiences }: TimelineProps) {
       </div>
 
       {/* RIGHT DETAIL PANEL */}
-      <div className="md:w-2/3 p-6 overflow-y-auto border-l border-l-fuchsia-600 dark:border-white">
+      <div className="md:w-2/3 p-6 overflow-y-auto md:border-l border-l-fuchsia-600 dark:border-white">
         {selected ? (
           <div className="space-y-3">
             <div className="flex justify-between flex-row-reverse">

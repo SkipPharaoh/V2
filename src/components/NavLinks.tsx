@@ -11,7 +11,6 @@ interface NavLinksProps {
   clickHandler: (link: string) => void;
 }
 
-// TODO: Change the resume link to a page that has the job experience in timeline format with an option to view/download resume
 const NavLinks = ({ isOpen, pathName, clickHandler }: NavLinksProps) => {
   const Links: Link[] = [
     { name: "Work", link: "/work" },
