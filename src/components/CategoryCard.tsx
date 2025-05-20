@@ -1,45 +1,57 @@
 import { forwardRef } from "react";
 
-interface CategoryCardProps {}
+type contentPos =
+  | "center"
+  | "between"
+  | "start"
+  | "center-safe"
+  | "end"
+  | "end-safe"
+  | "around"
+  | "evenly"
+  | "stretch"
+  | "baseline"
+  | "normal";
 
-interface CategoryCardInfo {
+type itemPos =
+  | "items-start"
+  | "items-end"
+  | "items-end-safe"
+  | "items-center"
+  | "items-center-safe"
+  | "items-stretch"
+  | "items-normal";
+
+type selfPos =
+  | "self-auto"
+  | "self-start"
+  | "self-center"
+  | "self-center-safe"
+  | "self-end"
+  | "self-end-safe"
+  | "self-stretch";
+
+type xPosition = contentPos | itemPos | selfPos;
+interface CategoryCardProps {
+  categories: CategoryCardInfo[];
+  justifyHorizantalPos?: xPosition;
+}
+
+export interface CategoryCardInfo {
   category: string;
   gradientColor: string;
   textColor: string;
 }
 
-const categoryCardInfo: CategoryCardInfo[] = [
-  {
-    category: "Develop",
-    gradientColor: "from-[#ffe4e4] to-[#ffe2d4]",
-    textColor: "text-[#cf3903]",
-  },
-  {
-    category: "Invest",
-    gradientColor: "from-[#e7ffdc] to-[#ddfff8]",
-    textColor: "text-[#097360]",
-  },
-  {
-    category: "Anime",
-    gradientColor: "from-[#cde1ff] to-[#f9d2ff]",
-    textColor: "text-[#4e0aa2]",
-  },
-  {
-    category: "Philosophy",
-    gradientColor: "from-[#ffdaf9] to-[#ffdcdc]",
-    textColor: "text-[#690c58]",
-  },
-];
-
 const CategoryCard = forwardRef<HTMLDivElement, CategoryCardProps>(
-  ({ ...props }, ref) => {
+  ({ categories, justifyHorizantalPos = "between", ...props }, ref) => {
     return (
       <div
         ref={ref}
         {...props}
-        className="flex select-none max-w-lg text-[0.65rem] md:text-sm lg:text-[0.9rem] xl:text-base items-center font-semibold justify-between w-[80%] sm:w-[75%] md:w-[70%] lg:w-[65%] xl:w-[60%]  mx-auto mt-6 mb-8 "
+        className={`flex select-none max-w-lg text-[0.65rem] md:text-sm lg:text-[0.9rem] xl:text-base items-center font-semibold justify-${justifyHorizantalPos} w-[80%] sm:w-[75%] md:w-[70%] lg:w-[65%] xl:w-[60%]  mx-auto mt-6 mb-8`}
       >
-        {categoryCardInfo.map((info, id) => {
+        {categories.map((info, id) => {
           return (
             <div
               key={info.category}
