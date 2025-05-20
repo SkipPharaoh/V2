@@ -1,12 +1,13 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { useEffect, useState } from "react";
 
+type ExpType = "Professional" | "Educational";
 export interface Experience {
-  id: string;
-  type: "Professional" | "Educational";
+  id: number;
+  type: ExpType;
   label: string;
   title: string;
   startDate: string;
@@ -29,10 +30,10 @@ const sortByDate = (data: Experience[]) => {
 
 export default function InteractiveTimeline({ experiences }: TimelineProps) {
   const sorted = sortByDate(experiences);
-  const [openSection, setOpenSection] = useState<
-    "Professional" | "Educational" | null
-  >("Professional");
-  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [openSection, setOpenSection] = useState<ExpType | null>(
+    "Professional"
+  );
+  const [selectedId, setSelectedId] = useState<number | null>(null);
 
   useEffect(() => {
     if (!selectedId && sorted.length > 0) {
@@ -40,19 +41,17 @@ export default function InteractiveTimeline({ experiences }: TimelineProps) {
     }
   }, [sorted, selectedId]);
 
-  const filteredByType = (type: "Professional" | "Educational") =>
+  const filteredByType = (type: ExpType) =>
     sortByDate(experiences.filter((exp) => exp.type === type));
 
   const selected = experiences.find((exp) => exp.id === selectedId);
 
   return (
-    <div className="flex flex-col md:flex-row h-full w-full max-w-4xl mx-auto">
+    <div className="flex flex-col md:flex-row h-full w-9/12 max-w-4xl mt-auto items-start">
       {/* LEFT SIDEBAR */}
-      <div className="md:w-1/3 border-r border-gray-200 dark:border-gray-700 p-4 content-center">
+      <div className="md:w-1/3 border-r border-gray-200 dark:border-gray-700 p-4">
         {["Professional", "Educational"].map((section) => {
-          const items = filteredByType(
-            section as "Professional" | "Educational"
-          );
+          const items = filteredByType(section as ExpType);
           const isOpen = openSection === section;
           return (
             <div key={section} className="mb-4">
