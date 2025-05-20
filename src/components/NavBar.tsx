@@ -30,7 +30,7 @@ const NavBar = forwardRef<HTMLDivElement, NavBarProps>(({ ...props }, ref) => {
     if (pathName !== link) {
       setTimeout(() => {
         setOpen(false);
-      }, 700);
+      }, 100);
     }
   };
 

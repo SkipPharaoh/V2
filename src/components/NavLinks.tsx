@@ -17,16 +17,8 @@ const NavLinks = ({ isOpen, pathName, clickHandler }: NavLinksProps) => {
     { name: "Work", link: "/work" },
     { name: "About", link: "/about" },
     { name: "Tech", link: "/tech" },
-    { name: "Resume", link: "/Caniggia_Thompson_Resume.pdf" },
-    // { name: "Experience", link: "/experience" },
+    { name: "Experience", link: "/experience" },
   ];
-
-  const resumeStyle = "xl:text-[1.1rem] font-regular ";
-  const linkStyle = "lg:text-lg";
-
-  const isResume = (name: string) => {
-    return name === "Resume";
-  };
 
   return (
     <ul
@@ -37,18 +29,12 @@ const NavLinks = ({ isOpen, pathName, clickHandler }: NavLinksProps) => {
       {Links.map((link) => (
         <li
           key={link.name}
-          className={`${isResume(link.name) ? resumeStyle : linkStyle}
-            md:ml-8 text-base md:my-0 my-7`}
+          className={`md:ml-8 text-base md:my-0 my-7 lg:text-lg`}
         >
           <Link
             href={link.link}
-            target={isResume(link.name) ? "_blank" : "_self"}
-            rel={isResume(link.name) ? "noreferrer" : undefined}
-            onClick={
-              isResume(link.name)
-                ? undefined
-                : () => clickHandler(`${link.name}`)
-            }
+            target={"_self"}
+            onClick={() => clickHandler(`${link.name}`)}
             className={`${
               pathName === link.link
                 ? " text-red-500 font-semibold "
