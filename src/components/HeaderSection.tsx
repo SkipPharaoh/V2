@@ -4,14 +4,14 @@ import { forwardRef, Fragment, HTMLAttributes } from "react";
 import { BsArrowUpRight } from "react-icons/bs";
 import SvgIcon, { IconType } from "./SvgIcon";
 
-type RolesWithIcons = {
+export interface AboutHeaderInFo {
   role: string;
   icon: IconType;
   viewBox: string;
   altName: string;
-};
+}
 
-type IconAttributes = Omit<RolesWithIcons, "role">;
+export type IconProperties = Omit<AboutHeaderInFo, "role">;
 
 type HomeStyleType = {
   avatar: StaticImageData;
@@ -29,14 +29,12 @@ interface HeaderSectionProps extends HTMLAttributes<HTMLDivElement> {
   gradient?: string;
   centerItems?: boolean;
   showSvgRow?: boolean;
-  avatarIcon?: IconAttributes;
-  rolesWithIcons?: RolesWithIcons[];
+  avatarIcon?: IconProperties;
+  rolesWithIcons?: AboutHeaderInFo[];
   name?: string;
-  nameIcon?: IconAttributes;
+  nameIcon?: IconProperties;
   homeStyle?: HomeStyleType;
 }
-
-// TODO: Call this component directly on the pages instead of a wrapper component... maybe??
 
 const HeaderSection = forwardRef<HTMLDivElement, HeaderSectionProps>(
   (

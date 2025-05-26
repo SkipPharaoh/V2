@@ -1,7 +1,13 @@
 import AboutBody from "@/components/AboutBody";
-import AboutHeader from "@/components/AboutHeader";
-import CategoryCard, { CategoryCardInfo } from "@/components/CategoryCard";
+import CategoryCard from "@/components/CategoryCard";
+import HeaderSection from "@/components/HeaderSection";
 import PageSignature from "@/components/PageSignature";
+import {
+  aboutCategoriesData,
+  aboutHeaderData,
+  avatarIconData,
+  nameIconData,
+} from "@public/About";
 
 /**
  * TODO: Add Leetcode states to the portfolio. Tentatively, planning to add it to the about page but I'm leaning towards adding it to the layout.
@@ -11,35 +17,21 @@ import PageSignature from "@/components/PageSignature";
  * GitHub leetcode queries: https://github.com/akarsh1995/leetcode-graphql-queries?tab=readme-ov-file
  * */
 
-const aboutCategoriesData: CategoryCardInfo[] = [
-  {
-    category: "Develop",
-    gradientColor: "from-[#ffe4e4] to-[#ffe2d4]",
-    textColor: "text-[#cf3903]",
-  },
-  {
-    category: "Invest",
-    gradientColor: "from-[#e7ffdc] to-[#ddfff8]",
-    textColor: "text-[#097360]",
-  },
-  {
-    category: "Anime",
-    gradientColor: "from-[#cde1ff] to-[#f9d2ff]",
-    textColor: "text-[#4e0aa2]",
-  },
-  {
-    category: "Philosophy",
-    gradientColor: "from-[#ffdaf9] to-[#ffdcdc]",
-    textColor: "text-[#690c58]",
-  },
-];
-
 export default function AboutPage() {
   return (
     <div className="px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 mx-auto max-w-[75rem]">
       <main className="max-w-screen">
         <div className=" mx-auto pt-16 -pb-10 max-w-7xl">
-          <AboutHeader />
+          <HeaderSection
+            title="About"
+            className="pt-0"
+            gradient="bg-gradient-to-br to-blue-500 via-red-400/90 from-yellow-500 mb-12 selection:text-gray-700 dark:selection:text-white/90 mt-6 mb-12"
+            avatarIcon={avatarIconData}
+            name={'Caniggia "Skip" Thompson'}
+            nameIcon={nameIconData}
+            rolesWithIcons={aboutHeaderData}
+            showSvgRow={false}
+          />
           <CategoryCard categories={aboutCategoriesData} />
           <AboutBody />
           <PageSignature />
