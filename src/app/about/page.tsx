@@ -21,11 +21,11 @@ export default function AboutPage() {
   return (
     <div className="px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 mx-auto max-w-[75rem]">
       <main className="max-w-screen">
-        <div className=" mx-auto pt-16 -pb-10 max-w-7xl">
+        <div className="mx-auto -pb-10 max-w-7xl">
           <HeaderSection
             title="About"
-            className="pt-0"
-            gradient="bg-gradient-to-br to-blue-500 via-red-400/90 from-yellow-500 mb-12 selection:text-gray-700 dark:selection:text-white/90 mt-6 mb-12"
+            className=""
+            gradient="bg-gradient-to-br to-blue-500 via-red-400/90 from-yellow-500 mb-12 selection:text-gray-700 dark:selection:text-white/90 mb-12"
             avatarIcon={avatarIconData}
             name={'Caniggia "Skip" Thompson'}
             nameIcon={nameIconData}

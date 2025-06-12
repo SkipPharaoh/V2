@@ -49,7 +49,7 @@ const CategoryCard = forwardRef<HTMLDivElement, CategoryCardProps>(
       <div
         ref={ref}
         {...props}
-        className={`flex select-none max-w-lg text-[0.65rem] md:text-sm lg:text-[0.9rem] xl:text-base items-center font-semibold justify-${justifyHorizantalPos} w-[80%] sm:w-[75%] md:w-[70%] lg:w-[65%] xl:w-[60%]  mx-auto mt-6 mb-8`}
+        className={`flex justify-${justifyHorizantalPos} select-none max-w-lg text-[0.65rem] md:text-sm lg:text-[0.9rem] xl:text-base items-center font-semibold w-[80%] sm:w-[75%] md:w-[70%] lg:w-[65%] xl:w-[60%] mx-auto mt-6 mb-8`}
       >
         {categories.map((info, id) => {
           return (

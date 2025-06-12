@@ -33,8 +33,8 @@ export default function ExperiencePage() {
   return (
     <div className="min-h-[75vh] md:min-h-[73vh] px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 xl:px-80 mx-auto">
       <main className="max-w-screen">
-        <div className=" mx-auto pt-16 -pb-10 max-w-7xl text-center">
-          <h2 className="bg-gradient-to-br dark:selection:text-white/80 selection:text-black/70 to-yellow-500 dark:to-yellow-200 from-blue-700 dark:from-red-500 bg-clip-text text-transparent items-center mx-auto text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-deca font-bold mt-6 mb-12">
+        <div className="mx-auto pt-24 -pb-10 max-w-7xl text-center">
+          <h2 className="bg-gradient-to-tr from-[#2DE1C2] to-blue-500 dark:selection:text-white/80 selection:text-black/70  bg-clip-text text-transparent items-center mx-auto text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-deca font-bold mb-12">
             Experience
           </h2>
           <CategoryCard
@@ -44,7 +44,7 @@ export default function ExperiencePage() {
         </div>
         <div className="pb-10 text-center flex justify-center items-center">
           <h2 className="pr-2">
-            If you would like to download to view/download my resume, click{" "}
+            If you would like to view and/or download my resume, click{" "}
           </h2>
           {resumeLink}
         </div>
