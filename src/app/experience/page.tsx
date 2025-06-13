@@ -1,5 +1,8 @@
 import InteractiveTimeline from "@/components/InteractiveTimeline";
-import CategoryCard, { CategoryCardInfo } from "@/components/CategoryCard";
+import CategoryCard, {
+  CategoryCardInfo,
+  xPosition,
+} from "@/components/CategoryCard";
 import { experienceData } from "@public/Experience";
 import Link from "next/link";
 import { FiFileText } from "react-icons/fi";
@@ -39,7 +42,7 @@ export default function ExperiencePage() {
           </h2>
           <CategoryCard
             categories={expCategoriesData}
-            justifyHorizantalPos="evenly"
+            justifyHorizantalPos={xPosition.Evenly}
           />
         </div>
         <div className="pb-10 text-center flex justify-center items-center">

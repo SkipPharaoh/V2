@@ -76,6 +76,20 @@ const config: Config = {
   },
   plugins: [],
   darkMode: "class",
+  safelist: [
+    "from-[#ffe4e4]",
+    "to-[#ffe2d4]",
+    "from-[#e7ffdc]",
+    "to-[#ddfff8]",
+    "from-[#cde1ff]",
+    "to-[#f9d2ff]",
+    "from-[#ffdaf9]",
+    "to-[#ffdcdc]",
+    "text-[#cf3903]",
+    "text-[#097360]",
+    "text-[#4e0aa2]",
+    "text-[#690c58]",
+  ],
 };
 
 export default config;
