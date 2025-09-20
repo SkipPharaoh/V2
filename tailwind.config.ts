@@ -77,6 +77,11 @@ const config: Config = {
   plugins: [],
   darkMode: "class",
   safelist: [
+    // Pattern-based safelist for Experience timeline badges
+    {
+      pattern: /^(bg|text)-(red|green|blue|yellow|pink)-(100|300|800|900)$/,
+    },
+    // Explicit safelist for About.tsx custom hex colors (unavoidable)
     "from-[#ffe4e4]",
     "to-[#ffe2d4]",
     "from-[#e7ffdc]",

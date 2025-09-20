@@ -1,27 +1,16 @@
-import InteractiveTimeline from "@/components/InteractiveTimeline";
-import CategoryCard, {
-  CategoryCardInfo,
-  xPosition,
-} from "@/components/CategoryCard";
+import ExperienceTimeline from "@/components/ExperienceTimeline";
+import HeaderSection from "@/components/HeaderSection";
 import { experienceData } from "@public/Experience";
 import Link from "next/link";
 import { FiFileText } from "react-icons/fi";
 
-const expCategoriesData: CategoryCardInfo[] = [
-  {
-    category: "Professional",
-    gradientColor: "from-[#ffe4e4] to-[#ffe2d4]",
-    textColor: "text-[#cf3903]",
-  },
-  {
-    category: "Educational",
-    gradientColor: "from-[#e7ffdc] to-[#ddfff8]",
-    textColor: "text-[#097360]",
-  },
-];
-
-// TODO: Fix responsive design on screens smaller than medium
 export default function ExperiencePage() {
+  const title = "Timeline";
+  const subtitle =
+    "A look at the places I've worked at so far. Feel free to view more information from my resume. 😎";
+  // const subtitle =
+  //   "The linear view of some milestones and notable moments that happened so far. And you can always find more information on LinkedIn. 😎";
+
   const resumeLink = (
     <Link
       href="/Caniggia_Thompson_Resume.pdf"
@@ -29,30 +18,27 @@ export default function ExperiencePage() {
       className="group flex items-center font-normal lg:font-bold space-x-2 text-sm md:text-base border-red-400 hover:bg-red-400 hover:text-white hover:drop-shadow-2xl text-red-500 rounded-md md:rounded-xl px-2 py-1 md:px-4 md:py-2 shadow-md drop-shadow-lg dark:bg-red-400 dark:shadow-none dark:hover:shadow-white select-none dark:text-white shadow-red-300"
     >
       <FiFileText className="dark:stroke-white stroke-red-400 stroke-2 group-hover:stroke-white" />
-      <p>here!</p>
+      <p>click here!</p>
     </Link>
   );
 
   return (
     <div className="min-h-[75vh] md:min-h-[73vh] px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 xl:px-80 mx-auto">
       <main className="max-w-screen">
-        <div className="mx-auto pt-24 -pb-10 max-w-7xl text-center">
-          <h2 className="bg-gradient-to-tr from-[#2DE1C2] to-blue-500 dark:selection:text-white/80 selection:text-black/70  bg-clip-text text-transparent items-center mx-auto text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-deca font-bold mb-12">
-            Experience
-          </h2>
-          <CategoryCard
-            categories={expCategoriesData}
-            justifyHorizantalPos={xPosition.Evenly}
-          />
-        </div>
-        <div className="pb-10 text-center flex justify-center items-center">
+        <HeaderSection
+          title={title}
+          subtitle={subtitle}
+          gradient="selection:text-black/40 dark:selection:text-white/40 bg-gradient-to-r from-emerald-600 to-teal-400 bg-clip-text text-transparent"
+          centerItems={false}
+        />
+        <div className="pb-10 text-center flex justify-center items-center py-10">
           <h2 className="pr-2">
-            If you would like to view and/or download my resume, click{" "}
+            If you would like to view and/or download my resume,{" "}
           </h2>
           {resumeLink}
         </div>
-        <div className="w-full max-w-screen-xl mx-auto flex justify-center mb-20 rounded-xl bg-gradient-to-b from-[#C1BED0] dark:from-[#81559B] to-transparent drop-shadow-2xl border-x-fuchsia-600 border-y-[#FF312E] dark:border-white border-2">
-          <InteractiveTimeline experiences={experienceData} />
+        <div className="mt-10 md:ml-12 lg:ml-12 pl-20">
+          <ExperienceTimeline experiences={experienceData} />
         </div>
       </main>
     </div>
