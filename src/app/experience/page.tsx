@@ -8,8 +8,6 @@ export default function ExperiencePage() {
   const title = "Timeline";
   const subtitle =
     "A look at the places I've worked at so far. Feel free to view more information from my resume. 😎";
-  // const subtitle =
-  //   "The linear view of some milestones and notable moments that happened so far. And you can always find more information on LinkedIn. 😎";
 
   const resumeLink = (
     <Link
