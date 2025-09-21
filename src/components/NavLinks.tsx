@@ -17,6 +17,7 @@ const NavLinks = ({ isOpen, pathName, clickHandler }: NavLinksProps) => {
     { name: "About", link: "/about" },
     { name: "Tech", link: "/tech" },
     { name: "Experience", link: "/experience" },
+    { name: "Services", link: "/service" },
   ];
 
   return (
