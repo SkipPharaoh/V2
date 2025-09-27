@@ -100,8 +100,6 @@ const NavBar = forwardRef<HTMLDivElement, NavBarProps>(({ ...props }, ref) => {
             <Image
               src={SkipDesign}
               alt="Image of the name Skip"
-              height={45}
-              width={90}
               className="h-[35px] md:h-[40px] lg:h-[45px] w-auto object-contain"
               priority
             />

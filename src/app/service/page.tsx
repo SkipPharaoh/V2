@@ -65,6 +65,7 @@ function Service({ title, desc, price, link, image }: ServiceProps) {
             fill
             className="object-cover transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:blur-sm group-hover:opacity-30"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority
           />
 
           {/* Title Overlay - Always Visible */}
