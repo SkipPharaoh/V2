@@ -92,15 +92,18 @@ const NavBar = forwardRef<HTMLDivElement, NavBarProps>(({ ...props }, ref) => {
       {...props}
       className={`${
         isScrolled && "bg-opacity-[0.7] shadow-md drop-shadow-lg "
-      } font-medium duration-500 bg-opacity-90 transition-all linear z-40 dark:text-white w-[75%] sm:w-[75%] md:w-[70%] lg:w-[55%] xl:w-[50%] max-w-6xl mx-auto  bg-white dark:bg-[#353535] drop-shadow-xs backdrop-blur-sm top-4 sticky rounded-2xl `}
+      } font-medium duration-500 bg-opacity-90 transition-all linear z-40 dark:text-white w-[85%] sm:w-[85%] md:w-[80%] lg:w-[70%] xl:w-[65%] 2xl:w-[60%] max-w-7xl mx-auto bg-white dark:bg-[#353535] drop-shadow-xs backdrop-blur-sm top-4 sticky rounded-2xl`}
     >
-      <div className="flex justify-between md:space-x-10 lg:space-x-12 xl:space-x-16 md:flex items-center place-items-center md:justify-center py-3 md:px-10 px-8">
-        <div className="select-none order-2 md:order-1 cursor-pointer flex items-center text-gray-800">
-          <Link href={"/"} onClick={() => setOpen(false)} className="">
+      <div className="flex items-center justify-between py-3 px-4 md:px-6 lg:px-8">
+        <div className="flex-shrink-0 select-none cursor-pointer flex items-center text-gray-800 order-1">
+          <Link href={"/"} onClick={() => setOpen(false)}>
             <Image
               src={SkipDesign}
               alt="Image of the name Skip"
-              height={"50"}
+              height={45}
+              width={90}
+              className="h-[35px] md:h-[40px] lg:h-[45px] w-auto object-contain"
+              priority
             />
           </Link>
         </div>

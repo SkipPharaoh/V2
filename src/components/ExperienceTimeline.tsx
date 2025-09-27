@@ -19,6 +19,14 @@ const reverse = (arr: Experience[]): Experience[] => {
 };
 
 export default function ExperienceTimeline({ experiences }: TimelineProps) {
+  /**
+   * TODO: Provide links to to job/team website that I've worked.
+   * If desire to use an company icon, create new component that handles the icon selection;
+   * Icon type: default, company name
+   * Logic should be along the lines of if experiences.CompanySVG,return company svg. Else we just return default svg (currently rendering).
+   * Microsoft svg data
+   * width="32" height="32" fill="#000000" viewBox="0 0 256 256"
+   */
   const exp = reverse(experiences);
 
   return (

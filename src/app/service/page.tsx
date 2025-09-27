@@ -55,7 +55,7 @@ export default function ServicesPage() {
 
 function Service({ title, desc, price, link, image }: ServiceProps) {
   return (
-    <Link href={link} className="block w-full h-full">
+    <Link href={link} target={"_blank"} className="block w-full h-full">
       <div className="group relative w-full h-80 bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden cursor-pointer transition-all duration-300 ease-in-out hover:shadow-2xl border border-gray-200 dark:border-gray-700">
         {/* Image Layer - Default State */}
         <div className="absolute inset-0 transition-all duration-300 ease-in-out group-hover:backdrop-blur-sm group-hover:bg-black/50">
@@ -69,7 +69,12 @@ function Service({ title, desc, price, link, image }: ServiceProps) {
 
           {/* Title Overlay - Always Visible */}
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-            <h3 className="text-xl font-bold text-white mb-2 group-hover:transform group-hover:translate-y-[-10px] transition-transform duration-300">
+            <h3
+              className="text-xl font-bold text-white mb-2 group-hover:transform group-hover:translate-y-[-10px] transition-transform duration-300"
+              style={{
+                textShadow: "2px 2px 4px #000000, -1px -1px 2px #000000",
+              }}
+            >
               {title}
             </h3>
           </div>
