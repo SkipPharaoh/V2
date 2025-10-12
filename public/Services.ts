@@ -9,7 +9,7 @@ export const servicesData = [
     title: "Custom Business Website",
     desc: "Bring your brand online with a professional, modern website tailored for your business. Includes responsive design, SEO-friendly setup, and a clean user experience.",
     price: "Starting at $800",
-    link: "https://skipxthonic.gumroad.com/l/ujzoil",
+    link: "https://services.caniggiathompson.com/l/ujzoil",
     image: WebsiteIcon,
   },
   {
@@ -17,7 +17,7 @@ export const servicesData = [
     title: "Personal / Creative Portfolio",
     desc: "Showcase your work, art, or personal brand with a unique portfolio website. Designed for impact, optimized for visibility.",
     price: "Starting at $500",
-    link: "https://skipxthonic.gumroad.com/l/esecx",
+    link: "https://services.caniggiathompson.com/l/esecx",
     image: LandingIcon,
   },
   {
@@ -25,7 +25,7 @@ export const servicesData = [
     title: "Landing Page",
     desc: "A single, high-converting page to launch your product, event, or campaign. Fast turnaround, mobile-friendly, built for results.",
     price: "Starting at $300",
-    link: "https://skipxthonic.gumroad.com/l/uizzxz",
+    link: "https://services.caniggiathompson.com/l/uizzxz",
     image: LandingImage,
   },
   {
@@ -33,7 +33,7 @@ export const servicesData = [
     title: "Software Development Consulting",
     desc: "Need expert guidance on your web project? I'll help you plan, strategize, and execute your vision with professional consultation.",
     price: "$100/hr or packages available",
-    link: "https://skipxthonic.gumroad.com/l/iwsmqp",
+    link: "https://services.caniggiathompson.com/l/iwsmqp",
     image: ConsultingImage,
   },
   //   {
